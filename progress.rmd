@@ -1,0 +1,25 @@
+---
+output: pdf_document
+---
+# Progress update 1/10/2015 - Fauzy Bin Che Yayah
+
+## Data Exploration 
+
+* Acquiring dataset by zone ( sample SQL )
+
+## Encoding
+
+* Re-encoding the dataset
+
+## Sampling
+
+* Finding the independent variables and dependent variable.
+* Sampling method
+* Using the independent variables for prediction
+* 
+
+
+
+
+
+
