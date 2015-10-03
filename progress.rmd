@@ -1,15 +1,161 @@
 ---
-output: pdf_document
+title: "Progress update 1/10/2015 by Fauzy Bin Che Yayah"
+output:
+  html_document: default
+  pdf_document:
+    highlight: haddock
+  word_document: default
 ---
-# Progress update 1/10/2015 - Fauzy Bin Che Yayah
+
+This document is generated for the explanation on how to do the data aquisition from the original datasoure inside the Enterprise Data WareHouse (EDWH)
 
 ## Data Exploration 
 
-* Acquiring dataset by zone ( sample SQL )
+* Acquiring dataset for 100 records, for each zone , randomize , selective year ; ie . 2015
+
+Below is the dataset column name :-
+
+```{r}
+a <- read.csv("table_struct.csv")
+names(a)
+```
+
+Total Zone available :  53
+
+```r
+Air Itam,Bangi,Bangsar,Banting,Batu,Batu Pahat,Bayan Baru,Bintulu,Bukit Anggerik,Bukit Mertajam,
+Bukit Raja,Butterworth,Cyberjaya,Gombak,Ipoh,Kajang,Kepong,Keramat,Kinrara,Kl Central,Klang,Kota Kinabalu
+Selatan,Kota Kinabalu Utara,Kuching,Kulim,Langkawi,Maluri,Melaka Utara,Miri,N. Sembilan Utara,Pandan,
+Pelangi,Perlis,Petaling Jaya,Puchong,Seberang Jaya,Senai,Sg Petani,Shah Alam,Sibu,Skudai
+Pontian,Stampin,Subang Jaya,Taman Petaling,Tampoi,Tar,Tasek,Tasik Ampang,Tdi,Teluk Intan,Terengganu
+Selatan,Teruntum
+
+```
+
+## Rules for acquiring dataset
+
+```r
+
+* status = 'Closed' # dataset must be closed for complete information
+* network_tt_id is NULL # not related to NTT
+* trouble ticket type = 'PASSIVE' 
+* cause_category , package_name , product , sub_product is NOT NULL
+* installed_date , created_date , closed_date is NOT NULL
+* created_date and closed_date is NOT NULL
+* length description > 10 # enough details of messages
+
+```
+## Sample SQL acquiring dataset from Impala
+
+* From Impala , loop the code , generate the SQL and replace the **[ ZONE ]** with the value from the zone List
+* 'PASSIVE' elements - http://www.excitingip.net/53/an-overview-of-active-and-passive-components-used-to-create-an-ip-network/
+
+```r
+select tt_row_id , tt_num , status, installed_date , created_date,closed_date,tt_sub_type,category,
+symptom_error_code,product,package_name,sub_product,
+cause_category,a.cause_code,resolution_code,closure_category,btu_platform, btu_type,
+dp_location,c.zone_name,a.exchange , description
+from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join
+exchange_zone c ON (trim(a.exchange)=trim(c.building_id))  and (b.code <> 'PASSIVE' )
+where  c.zone_name like '%[ ZONE ]%' and a.status like '%Closed%'  and length(a.cause_category) > 1
+and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6
+and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%' and  length(a.description) > 10
+order by rand() limit 100 
+
+```
+
 
 ## Encoding
 
 * Re-encoding the dataset
+
+```{r}
+
+library(caret)
+library(mlbench)
+library(caret)
+
+ctt <- read.csv("c://ctt2014.csv")
+ctt$`tt_row_id` <- NULL
+ctt$`tt_num` <- NULL
+ctt$`created_date` <- NULL
+ctt$`closed_date` <- NULL
+ctt$`installed_date` <- NULL
+num <- as.numeric(ctt$status)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "status1"
+num <- as.numeric(ctt$tt_sub_type)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "tt_sub_type1"
+num <- as.numeric(ctt$category)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "category1"
+num <- as.numeric(ctt$symptom_error_code)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "symptom_error_code1"
+num <- as.numeric(ctt$product)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "product1"
+num <- as.numeric(ctt$package_name)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "package_name1"
+num <- as.numeric(ctt$sub_product)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "sub_product1"
+num <- as.numeric(ctt$cause_category)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "cause_category1"
+num <- as.numeric(ctt$cause_code)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "cause_code1"
+num <- as.numeric(ctt$resolution_code)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "resolution_code1"
+num <- as.numeric(ctt$closure_category)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "closure_category1"
+num <- as.numeric(ctt$btu_platform)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "btu_platform1"
+num <- as.numeric(ctt$btu_type)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "btu_type1"
+num <- as.numeric(ctt$dp_location)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "dp_location1"
+num <- as.numeric(ctt$zone_name)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "zone_name1"
+num <- as.numeric(ctt$exchange)-1
+ctt <- cbind(ctt,num)
+names(ctt)[names(ctt)=="num"] <- "exchange1"
+ctt <- ctt[,c(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33)]
+
+set.seed(825)
+
+#70 30 
+
+inTraining <- createDataPartition(ctt$resolution_code1, p = .7, list = FALSE)
+training <- ctt[ inTraining,]
+testing  <- ctt[-inTraining,]
+
+#Repeated k-fold Cross Validation 10-fold cross validation number=10 ## 10-fold CV  ## repeated ten times
+fitControl <- trainControl(method="repeatedcv", number=10, repeats=1)
+
+# model = train(am ~ ., method = 'rpart', data = mtcars)
+# http://topepo.github.io/caret/modelList.html
+# This tells us that gbm supports both regression and classification. As this is a binary classification, we need to force gbm into using the classification mode. We do this by changing the outcome variable to a factor (we use a copy of the outcome as we'll need the original one for our next model):
+
+training$resolution_code1 <- as.factor(training$resolution_code1)
+model <- train(training$resolution_code1 ~ .,  data=training, method="gbm", trControl=fitControl , verbose = FALSE)
+importance <- varImp(model, scale=TRUE)
+model
+print(importance)
+plot(importance)
+predict(model,head(testing), type = "raw")
+
+
+```
 
 ## Sampling
 

@@ -1,0 +1,91 @@
+---
+output: word_document
+---
+# Progress update 1/10/2015 - Fauzy Bin Che Yayah
+
+## Data Exploration 
+
+* Acquiring dataset by zone
+
+Dataset structure
+
+```{r}
+a <- read.csv("table_struct.csv")
+names(a)
+```
+
+```r
+select * from nova_trouble_ticket limit 1
+```
+
+Total Zone =  53
+
+* ZONE AIR ITAM
+* ZONE BANGI
+* ZONE BANGSAR
+* ZONE BANTING
+* ZONE BATU
+* ZONE BATU PAHAT
+* ZONE BAYAN BARU
+* ZONE BINTULU
+* ZONE BUKIT ANGGERIK
+* ZONE BUKIT MERTAJAM
+* ZONE BUKIT RAJA
+* ZONE BUTTERWORTH
+* ZONE CYBERJAYA
+* ZONE GOMBAK
+* ZONE IPOH
+* ZONE KAJANG
+* ZONE KEPONG
+* ZONE KERAMAT
+* ZONE KINRARA
+* ZONE KL CENTRAL
+* ZONE KLANG
+* ZONE KOTA KINABALU SELATAN
+* ZONE KOTA KINABALU UTARA
+* ZONE KUCHING
+* ZONE KULIM
+* ZONE LANGKAWI
+* ZONE MALURI
+* ZONE MELAKA UTARA
+* ZONE MIRI
+* ZONE N. SEMBILAN UTARA
+* ZONE PANDAN
+* ZONE PELANGI
+* ZONE PERLIS
+* ZONE PETALING JAYA
+* ZONE PUCHONG
+* ZONE SEBERANG JAYA
+* ZONE SENAI
+* ZONE SG PETANI
+* ZONE SHAH ALAM
+* ZONE SIBU
+* ZONE SKUDAI PONTIAN
+* ZONE STAMPIN
+* ZONE SUBANG JAYA
+* ZONE TAMAN PETALING
+* ZONE TAMPOI
+* ZONE TAR
+* ZONE TASEK
+* ZONE TASIK AMPANG
+* ZONE TDI
+* ZONE TELUK INTAN
+* ZONE TERENGGANU SELATAN
+* ZONE TERUNTUM
+
+## Encoding
+
+* Re-encoding the dataset
+
+## Sampling
+
+* Finding the independent variables and dependent variable.
+* Sampling method
+* Using the independent variables for prediction
+* 
+
+
+
+
+
+
