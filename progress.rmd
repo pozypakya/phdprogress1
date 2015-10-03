@@ -16,6 +16,7 @@ This document is generated for the explanation on how to do the data aquisition 
 Below is the dataset column name :-
 
 ```{r}
+assign("last.warning", NULL, envir = baseenv())
 a <- read.csv("table_struct.csv")
 names(a)
 ```
@@ -71,9 +72,9 @@ order by rand() limit 100
 
 ```{r}
 
-library(caret)
-library(mlbench)
-library(caret)
+suppressWarnings(library(caret))
+suppressWarnings(library(mlbench))
+suppressWarnings(library(caret))
 
 ctt <- read.csv("c://ctt2014.csv")
 ctt$`tt_row_id` <- NULL
@@ -129,7 +130,7 @@ names(ctt)[names(ctt)=="num"] <- "zone_name1"
 num <- as.numeric(ctt$exchange)-1
 ctt <- cbind(ctt,num)
 names(ctt)[names(ctt)=="num"] <- "exchange1"
-ctt <- ctt[,c(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33)]
+ctt <- ctt[,c(18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33)]
 
 set.seed(825)
 
@@ -147,7 +148,7 @@ fitControl <- trainControl(method="repeatedcv", number=10, repeats=1)
 # This tells us that gbm supports both regression and classification. As this is a binary classification, we need to force gbm into using the classification mode. We do this by changing the outcome variable to a factor (we use a copy of the outcome as we'll need the original one for our next model):
 
 training$resolution_code1 <- as.factor(training$resolution_code1)
-model <- train(training$resolution_code1 ~ .,  data=training, method="gbm", trControl=fitControl , verbose = FALSE)
+suppressWarnings(model <- train(training$resolution_code1 ~ .,  data=training, method="gbm", trControl=fitControl , verbose = FALSE))
 importance <- varImp(model, scale=TRUE)
 model
 print(importance)
@@ -162,18 +163,18 @@ predict(model,head(testing), type = "raw")
 * Building dictionary Vector as presented in Proposal Defense
 
 ```{r}
-library(corrplot)
-library(readxl)
-library(tools)
-library(Rgraphviz)
-library(SnowballC)
-library(caret)
-require(tm)
+suppressWarnings(library(corrplot))
+suppressWarnings(library(readxl))
+suppressWarnings(library(tools))
+suppressWarnings(library(Rgraphviz))
+suppressWarnings(library(SnowballC))
+suppressWarnings(library(caret))
+suppressWarnings(require(tm))
 
-d <- read_excel("c://word.xlsx",1)
-df <- data.frame(d , stringsAsFactors = FALSE)
+ctt <- read.csv("c://ctt2014.csv")
+df <- data.frame(ctt$description , stringsAsFactors = FALSE)
 mycorpus <- Corpus(DataframeSource(df))
- tdm <- TermDocumentMatrix(mycorpus, control = list(removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE , stemming  = TRUE))
+ tdm <- TermDocumentMatrix(mycorpus, control = list(weight = weightTfIdf  , removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE , stemming  = TRUE))
 # tdm <- TermDocumentMatrix(mycorpus, control = list( weight = weightTfIdf  , removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE ))
 tdm <- removeSparseTerms(tdm, sparse= 0.8)
 c <- inspect(tdm)
