@@ -157,13 +157,29 @@ predict(model,head(testing), type = "raw")
 
 ```
 
-## Sampling
+## CTT Description Analysis
 
-* Finding the independent variables and dependent variable.
-* Sampling method
-* Using the independent variables for prediction
-* 
+* Building dictionary Vector as presented in Proposal Defense
 
+```{r}
+library(corrplot)
+library(readxl)
+library(tools)
+library(Rgraphviz)
+library(SnowballC)
+library(caret)
+require(tm)
+
+d <- read_excel("c://word.xlsx",1)
+df <- data.frame(d , stringsAsFactors = FALSE)
+mycorpus <- Corpus(DataframeSource(df))
+ tdm <- TermDocumentMatrix(mycorpus, control = list(removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE , stemming  = TRUE))
+# tdm <- TermDocumentMatrix(mycorpus, control = list( weight = weightTfIdf  , removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE ))
+tdm <- removeSparseTerms(tdm, sparse= 0.8)
+c <- inspect(tdm)
+plot(tdm, corThreshold = 0.2, weighting = TRUE)
+View(c)
+```
 
 
 
