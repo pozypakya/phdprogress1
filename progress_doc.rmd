@@ -1,0 +1,274 @@
+---
+title: "PHD - Progress update 14/10/2015"
+author: "Fauzy Bin Che Yayah"
+date: "October 14, 2015"
+output: html_document
+number_sections: yes
+documentclass: article
+classoption: a3paper
+---
+
+* Why use Bayesian Net ?
+
+1.  To look for the root cause - the dataset is in factor type which is status not a number.
+2.  To find out the probabilistic relationship between the symptom error code and the resolution
+3.  
+
+![My caption.](1.png)
+
+| Citation|Method| Output|Conclusions|
+|-------------:|------------:|-------------:|-------------:|
+|TroubleMiner: Mining network trouble tickets Medem, A. ; Akodjenou, M.-I ; Teixeira, R. 20091|Trouble tickets classification |*  Automation process on clustering the free text inside the description of the trouble tickets. * Choosing the correct keywords for the analysis|Using term frequency distance between trouble tickets and similarity between clusters|
+|Knowledge Discovery from Trouble Ticketing Reports in a Large Telecommunication Company Temprado, Y. ; Garcia, C. ; Molinero, F.J. 2009|Data Mining , Text Mining and Machine Learning , Bayes Net, Naïve Bayes|Prediction on the next action of trouble tickets ,Different snapshots were added to the machine learning algorithm for training|Combination of multiple method to construct the recommendation , Using Bayesian for prediction|
+|A Bayesian Approach To Stochastic Root Finding 2011|x|x|x|
+|A Fully Bayesian Approach For Unit Root Testing 2011 |x|x|x|
+|Online Root-Cause Analysis Of Alarms In Discrete Bayesian 2014|x|x|x|
+|Documents Categorization Based On Bayesian Spanning Tree 2006|x|x|x|
+|Benefits of a Bayesian Approach to Anomaly and Failure 2009|x|x|x|
+
+
+List of literature review regarding Bayesian Net :-
+
+1.A real-life application of multi-agent systems for fault diagnosis in the provision of an Internet business service
+
+2.A Bayesian Network approach to diagnosing the root cause of failure 
+
+3.sss
+
+![My caption.](2.png)
+
+# Process on gathering the dataset
+
+* Acquiring dataset for 100 records, for each zone , randomize , selective year ; ie . 2015
+* Rules :-
+
+| Rules|Description|
+|-------------:|------------:|
+| status = 'Closed'|Dataset must be closed for complete information|
+| network_tt_id is NULL |Dataset must be not related to Network Trouble Ticket|
+| trouble ticket type <> PASSIVE |Trouble Ticket must related to the Active elements such as routers, switches , modem , etc|
+| installed_date is NOT NULL  |This field must have value|
+| created_date is NOT NULL  |This field must have value|
+| closed_date is NOT NULL  |This field must have value|
+| closed_date is NOT NULL  |This field must have value|
+| product is NOT NULL  |This field must have value|
+| sub_product is NOT NULL  |This field must have value|
+| length description > 10  |This field is useful for text analysis |
+| rand()  | Record selection is in random mode |
+| zone  | Should selective from different zone , sparse  |
+
+For sample purpose - selecting dataset from `ZONE KEPONG` for the analysis due to this zone has the <b>highest records</b> inside the Trouble Ticket dataset.
+
+* Using Impala for the data retrieval  :-
+
+Documentation - https://github.com/piersharding/dplyrimpaladb
+
+* Data processing using DplyrImpalaDb 
+* Package installation manual below :-
+
+```r
+install.packages(c("RJDBC", "devtools", "dplyr"))
+devtools::install_github("jwills/dplyrimpaladb")
+install.packages("dplyrimpaladb")
+```
+* Basic notes why choosing Impala.
+
+1.  Cloudera 'Impala', which is a massively parallel processing (MPP) SQL query engine runs natively in Apache Hadoop
+2.  Impala's Place in the Big Data Ecosystem
+3.  Flexibility for Big Data Workflow
+4.  High-Performance Analytics
+
+# Connection to Impala 
+
+Basic Impala drivers can be downloaded from https://github.com/Mu-Sigma/RImpala/blob/master/impala-jdbc-cdh5.zip
+
+Below is the components required and how to set the class path for the Impala drivers , RJava , RJDBC and dplyr
+
+```{r}
+
+
+suppressWarnings(suppressMessages(library("rJava")))
+suppressWarnings(suppressMessages(library("RJDBC")))
+suppressWarnings(suppressMessages(library("dplyr")))
+suppressWarnings(suppressMessages(library("caret")))
+suppressWarnings(suppressMessages(library("corrplot")))
+suppressWarnings(suppressMessages(library("lazy")))
+suppressWarnings(suppressMessages(library("dplyrimpaladb")))
+suppressWarnings(suppressMessages(library("rpart")))
+
+
+.jaddClassPath(c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T)))
+
+.jinit(classpath = c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T)))
+
+dplyr.jdbc.classpath = c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T))
+
+conn <- src_impaladb(dbname='nova', host='10.54.1.151')
+
+```
+
+* Zone list
+
+```{r}
+result <-  tbl(conn, sql("select zone from nova.nova_trouble_ticket where zone <> 'null' group by zone order by zone limit 1000"))
+as.data.frame(result)
+```
+
+
+* Trouble Ticket Data Dictionary
+
+```{r}
+result <-  tbl(conn, sql("select * from nova_trouble_ticket where zone <> 'null' limit 1"))
+as.data.frame(apply(as.data.frame(result),2,class))
+
+```
+
+# Getting the dataset from Impala 
+
+Sample dataset - Selection trouble tickets only from <b>Zone Kepong</b>. The SQL is define by :-
+
+* Why Kepong zone ? 
+
+`Zone Kepong` contains very rich information especially for the textual analysis and also one of the largest composition of the cause code & the resolution code which is good for the supervised learning. 
+
+| Rules|Description|
+|-------------:|------------:|
+| a.status like '%Closed%'|Dataset must be closed for complete information|
+| network_tt_id = 'null' |Dataset must be not related to Network Trouble Ticket|
+| trouble ticket type <> PASSIVE |Trouble Ticket must related to the Active elements such as routers, switches , modem , etc. Excluding for now if related to the `3rd party` causes , `customer behavior` and `Passive` elements |
+| installed_date is NOT NULL  |This field must have value|
+| created_date is NOT NULL  |This field must have value|
+| closed_date is NOT NULL  |This field must have value|
+| closed_date is NOT NULL  |This field must have value|
+| product is NOT NULL  |This field must have value|
+| sub_product is NOT NULL  |This field must have value|
+| length description > 10  |This field is useful for text analysis |
+| rand()  | Record selection is in random mode |
+| zone  | Should selective from different zone , sparse control  |
+
+
+Generated SQL :-
+
+```r
+select * from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join exchange_zone c ON (trim(a.exchange)=trim(c.building_id)) and (b.code <> 'PASSIVE' ) where c.zone_name like '%ZONE KEPONG%' and a.status like '%Closed%'  and length(a.cause_category) > 1  and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6 and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%'  and  length(a.description) > 10 and network_tt_id = 'null' order by rand() limit 10000 "
+```
+
+# Datset filtering 
+
+Removing non-related fields such as trouble ticket key , trouble ticket number , trouble ticket date etc.
+
+```{r}
+
+result <-  tbl(conn, sql("select a.* from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join exchange_zone c ON (trim(a.exchange)=trim(c.building_id)) and (b.code <> 'PASSIVE' ) where c.zone_name like '%ZONE KEPONG%' and a.status like '%Closed%' and  length(a.cause_category) > 1  and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6 and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%'  and  length(a.description) > 10 and a.network_tt_id = 'null' order by rand() limit 100"))
+
+result <- as.data.frame(result)
+result$`tt_row_id` <- NULL
+result$`tt_num` <- NULL
+result$`created_date` <- NULL
+result$`closed_date` <- NULL
+result$`installed_date` <- NULL
+num <- as.numeric(result$status)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "status1"
+num <- as.numeric(result$tt_sub_type)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "tt_sub_type1"
+num <- as.numeric(result$category)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "category1"
+num <- as.numeric(result$symptom_error_code)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "symptom_error_code1"
+num <- as.numeric(result$product)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "product1"
+num <- as.numeric(result$package_name)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "package_name1"
+num <- as.numeric(result$sub_product)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "sub_product1"
+num <- as.numeric(result$cause_category)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "cause_category1"
+num <- as.numeric(result$cause_code)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "cause_code1"
+num <- as.numeric(result$resolution_code)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "resolution_code1"
+num <- as.numeric(result$closure_category)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "closure_category1"
+num <- as.numeric(result$btu_platform)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "btu_platform1"
+num <- as.numeric(result$btu_type)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "btu_type1"
+num <- as.numeric(result$dp_location)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "dp_location1"
+num <- as.numeric(result$zone_name)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "zone_name1"
+num <- as.numeric(result$exchange)-1
+result <- cbind(result,num)
+names(result)[names(result)=="num"] <- "exchange1"
+result <- result[,c(59:73)]
+head(result)
+
+```
+
+Remove again the predictors column which might have one unique value which can leads to <b>zero variance</b> result
+
+```{r}
+# result <- result[,-nearZeroVar(result)] 
+# head(result)
+```
+
+Find the correlation between the variables using <b>Pearson</b>.
+
+```{r}
+# correlations <- cor(result, use="pairwise.complete.obs", method="pearson")
+# print(correlations)
+```
+
+Find the <b>highest correlated</b> variables.
+
+```{r}
+# highlyCorrelated <- findCorrelation(correlations, 0.5 ,verbose = TRUE,names = TRUE)
+# highlyCorrelated
+```
+
+Summary of the correlated variables.
+
+```{r}
+# summary(correlations)
+```
+
+Plot correlated variables.
+
+```{r}
+# corrplot(correlations, method = "circle",tl.cex = 0.9)
+```
+
+Feature selection process to confirm which variable does become the independent and <b>resolution code</b> is the dependent variable via GBM (Stochastic Gradient Boosting).
+
+List of other available model - http://topepo.github.io/caret/modelList.html
+
+
+```{r}
+# set.seed(999)
+# suppressWarnings(library(mlbench))
+# suppressWarnings(library(caret))
+# control <- trainControl(method="repeatedcv", number=10, repeats=3)
+# model <- train(resolution_code1~., data=result, method="gbm", preProcess="scale", trControl=control , verbose = FALSE)
+# importance <- varImp(model, scale=TRUE)
+# print(importance)
+# plot(importance)
+```
+
+
+
+
