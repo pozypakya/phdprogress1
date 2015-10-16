@@ -2,19 +2,21 @@
 title: "PHD - Progress update 14/10/2015"
 author: "Fauzy Bin Che Yayah"
 date: "October 14, 2015"
-output: html_document
+output: word_document
 number_sections: yes
 documentclass: article
 classoption: a3paper
 ---
 
 * Why use Bayesian Net ?
-
+    
 1.  To look for the root cause - the dataset is in factor type which is status not a number.
 2.  To find out the probabilistic relationship between the symptom error code and the resolution
 3.  
 
-![My caption.](1.png)
+![My caption.](1.png) 
+
+<div id="1">1</div>
 
 | Citation|Method| Output|Conclusions|
 |-------------:|------------:|-------------:|-------------:|
@@ -159,99 +161,144 @@ Removing non-related fields such as trouble ticket key , trouble ticket number ,
 
 ```{r}
 
-result <-  tbl(conn, sql("select a.* from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join exchange_zone c ON (trim(a.exchange)=trim(c.building_id)) and (b.code <> 'PASSIVE' ) where c.zone_name like '%ZONE KEPONG%' and a.status like '%Closed%' and  length(a.cause_category) > 1  and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6 and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%'  and  length(a.description) > 10 and a.network_tt_id = 'null' order by rand() limit 100"))
+conn <- src_impaladb(dbname='nova', host='10.54.1.151')
+
+result <-  tbl(conn, sql("select a.tt_row_id,a.tt_num,a.tt_type,a.tt_sub_type,a.status,a.severity,a.important_message,a.appointment_flag,a.nova_account_name,a.nova_subscriber_num,a.nova_account_num,a.package_row_id,a.created_by,a.category,a.symptom_error_code,a.priority,a.product,a.sub_product,a.package_name,a.network_tt_id,a.swap_order_num,a.cause_category,a.cause_code,a.resolution_code,a.closure_category,a.resolution_team,a.service_affected,a.service_order_num,a.btu_type,a.owner,a.owner_name,a.group_owner,a.owner_position,a.btu_platform,a.dp_location,a.created_date,a.pending_verify_date,a.closed_by,a.closed_date,a.source,a.installed_date,a.description,a.repeat_ticket_count,a.follow_up_ticket_count,a.fdp_device_name,
+a.fdp_site_name,a.olt_site_name,a.exchange,a.`timestamp`,a.contact_id,a.contact_name,a.contact_office_phone,a.contact_mobile_phone,a.contact_home_phone,a.contact_email_addr,a.due_date,a.part_num,a.network_layer,a.network_row_id,a.asset_id,a.ptt,a.zone,a.service_point_id , c.zone_name, c.district,c.state, c.region from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join exchange_zone c ON (trim(a.exchange)=trim(c.building_id)) and (b.code <> 'PASSIVE' ) where c.zone_name like '%ZONE KEPONG%' and a.status like '%Closed%' and  length(a.cause_category) > 1 and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6 and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%' and  length(a.description) > 10 and a.network_tt_id = 'null' order by rand() limit 100"))
 
 result <- as.data.frame(result)
-result$`tt_row_id` <- NULL
-result$`tt_num` <- NULL
-result$`created_date` <- NULL
-result$`closed_date` <- NULL
-result$`installed_date` <- NULL
-num <- as.numeric(result$status)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "status1"
-num <- as.numeric(result$tt_sub_type)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "tt_sub_type1"
-num <- as.numeric(result$category)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "category1"
-num <- as.numeric(result$symptom_error_code)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "symptom_error_code1"
-num <- as.numeric(result$product)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "product1"
-num <- as.numeric(result$package_name)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "package_name1"
-num <- as.numeric(result$sub_product)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "sub_product1"
-num <- as.numeric(result$cause_category)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "cause_category1"
-num <- as.numeric(result$cause_code)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "cause_code1"
-num <- as.numeric(result$resolution_code)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "resolution_code1"
-num <- as.numeric(result$closure_category)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "closure_category1"
-num <- as.numeric(result$btu_platform)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "btu_platform1"
-num <- as.numeric(result$btu_type)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "btu_type1"
-num <- as.numeric(result$dp_location)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "dp_location1"
-num <- as.numeric(result$zone_name)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "zone_name1"
-num <- as.numeric(result$exchange)-1
-result <- cbind(result,num)
-names(result)[names(result)=="num"] <- "exchange1"
-result <- result[,c(59:73)]
-head(result)
 
 ```
 
-Remove again the predictors column which might have one unique value which can leads to <b>zero variance</b> result
+Close the connection from Impala
 
 ```{r}
-# result <- result[,-nearZeroVar(result)] 
-# head(result)
+x <- conn$con
+class(x) <- c('JDBCConnection')
+dbDisconnect(x)
+
+```
+
+Save the class as the data.frame 
+
+```{r}
+
+df <- as.data.frame(result)
+df$contact_name <- NULL
+df$contact_home_phone <- NULL
+df$contact_email_addr <- NULL
+df$contact_office_phone <- NULL
+df$contact_mobile_phone <- NULL
+df$`tt_row_id` <- NULL
+df$`tt_num` <- NULL
+df$tt_type <- NULL
+df$`created_date` <- NULL
+df$`closed_date` <- NULL
+df$`installed_date` <- NULL
+df$timestamp <- NULL
+df$service_point_id <- NULL
+df$contact_id <- NULL
+df$owner_position <- NULL
+df$tt_sub_type <- NULL
+df$severity <- NULL
+df$status <- NULL
+df$important_message <- NULL
+df$network_tt_id <- NULL
+df$swap_order_num <- NULL
+df$appointment_flag <- NULL
+df$nova_account_name <- NULL
+df$nova_subscriber_num <- NULL
+df$nova_account_num <- NULL
+df$repeat_ticket_count <- NULL
+df$follow_up_ticket_count <- NULL
+df$service_order_num <- NULL
+df$source <- NULL
+df$owner_name <- NULL
+df$description <- NULL
+df$due_date <- NULL
+df$part_num <- NULL
+df$zone <- NULL
+df$ptt <- NULL
+df$asset_id <- NULL
+df$network_layer <- NULL
+df$network_row_id <- NULL
+df$pending_verify_date <- NULL
+df$package_row_id <- NULL
+df$priority <- NULL
+summary(df)
+
+```
+
+Looping the columns name and rename it to [column name]+1 as the factor name
+
+
+```{r}
+
+
+for(i in names(df)){
+
+  num <- as.numeric(as.factor(df[,i]))-1
+  df <- cbind(df,num)
+  names(df)[names(df)=="num"] <- paste(names(df[i]),"_factor",sep = "")
+  print(paste(names(df[i]),"1",sep = ""))
+}
+
+df <- df[27:52]
+names(df)
+
+```
+
+<b>Remove</b> the predictors column which might have one unique value which can leads to <b>zero variance</b> result
+
+The list below is non-zero variance variables
+
+```{r}
+df <- df[,-nearZeroVar(df)] 
+names(df)
+
 ```
 
 Find the correlation between the variables using <b>Pearson</b>.
 
 ```{r}
-# correlations <- cor(result, use="pairwise.complete.obs", method="pearson")
-# print(correlations)
+correlations <- cor(df, use="pairwise.complete.obs", method="pearson")
+print(correlations)
 ```
+
 
 Find the <b>highest correlated</b> variables.
 
+| Rules|Description|
+|-------------:|------------:|
+| <b>- +.70 or higher</b>|<b>Very strong relationship</b>|
+| - +.40 to +.69|Strong positive relationship|
+| - +.30 to +.39|Moderate relationship|
+| - +.20 to +.29|weak  relationship|
+| - +.01 to +.19|No or negligible relationship|
+
+
+
+
 ```{r}
-# highlyCorrelated <- findCorrelation(correlations, 0.5 ,verbose = TRUE,names = TRUE)
-# highlyCorrelated
+# Choose 0.7 Very strong relationship
+highlyCorrelated <- findCorrelation(correlations, 0.7 ,verbose = FALSE,names = TRUE)
+highlyCorrelated
 ```
 
 Summary of the correlated variables.
 
 ```{r}
-# summary(correlations)
+summary(correlations)
 ```
 
 Plot correlated variables.
 
 ```{r}
-# corrplot(correlations, method = "circle",tl.cex = 0.9)
+png(height=1200, width=1200, pointsize=15, file="corrplot.png")
+corrplot(correlations, method = "number",tl.cex = 0.9 ,addCoef.col="grey", order = "AOE")
+dev.off()
 ```
+![My caption.](corrplot.png)
 
 Feature selection process to confirm which variable does become the independent and <b>resolution code</b> is the dependent variable via GBM (Stochastic Gradient Boosting).
 
@@ -259,16 +306,58 @@ List of other available model - http://topepo.github.io/caret/modelList.html
 
 
 ```{r}
-# set.seed(999)
-# suppressWarnings(library(mlbench))
-# suppressWarnings(library(caret))
-# control <- trainControl(method="repeatedcv", number=10, repeats=3)
-# model <- train(resolution_code1~., data=result, method="gbm", preProcess="scale", trControl=control , verbose = FALSE)
-# importance <- varImp(model, scale=TRUE)
-# print(importance)
-# plot(importance)
+set.seed(777)
+suppressWarnings(suppressMessages(library(mlbench)))
+control <- trainControl(method = "repeatedcv", number = 10, repeats = 3)
+model <-
+train(
+resolution_code_factor ~ ., data = df, method = "gbm", preProcess = "scale", trControl =
+control , verbose = FALSE
+)
+importance <- varImp(model, scale = TRUE)
+print(importance)
+plot(importance)
 ```
 
 
+![My caption.](main_variables.png)
+
+The main variables / factors are :-
+
+*   cause_code_factor       
+*   resolution_team_factor 
+*   cause_category_factor  
+*   fdp_device_name_factor 
+*   owner_factor            
+*   created_by_factor        
+*   service_affected_factor 
+*   dp_location_factor       
+*   btu_type_factor          
+
+as listed from the importance plot
 
 
+![My caption.](exact.png)
+
+sss
+
+![My caption.](payment.png)
+
+sss
+
+
+![My caption.](train.png)
+
+sss
+
+![My caption.](6.png)
+
+sss
+
+![My caption.](chunk.png)
+
+sss
+
+![My caption.](roadmap.png)
+
+<p><a href="#1">1</a></p>
