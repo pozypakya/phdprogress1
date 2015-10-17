@@ -2,7 +2,7 @@
 title: "PHD - Progress update 14/10/2015"
 author: "Fauzy Bin Che Yayah"
 date: "October 14, 2015"
-output: word_document
+output: html_document
 number_sections: yes
 documentclass: article
 classoption: a3paper
@@ -97,7 +97,7 @@ suppressWarnings(suppressMessages(library("corrplot")))
 suppressWarnings(suppressMessages(library("lazy")))
 suppressWarnings(suppressMessages(library("dplyrimpaladb")))
 suppressWarnings(suppressMessages(library("rpart")))
-
+suppressWarnings(suppressMessages(library("DiagrammeR")))
 
 .jaddClassPath(c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T)))
 
@@ -133,6 +133,8 @@ Sample dataset - Selection trouble tickets only from <b>Zone Kepong</b>. The SQL
 
 `Zone Kepong` contains very rich information especially for the textual analysis and also one of the largest composition of the cause code & the resolution code which is good for the supervised learning. 
 
+<div id="dataset rules"></div>
+
 | Rules|Description|
 |-------------:|------------:|
 | a.status like '%Closed%'|Dataset must be closed for complete information|
@@ -155,7 +157,9 @@ Generated SQL :-
 select * from nova_trouble_ticket a join active_code b on (trim(a.cause_code) = trim(b.cause_code)) join exchange_zone c ON (trim(a.exchange)=trim(c.building_id)) and (b.code <> 'PASSIVE' ) where c.zone_name like '%ZONE KEPONG%' and a.status like '%Closed%'  and length(a.cause_category) > 1  and length(a.created_date) > 6 and length(a.closed_date) > 6 and length(a.installed_date) > 6 and a.package_name not like '%null%' and a.product not like '%null%' and a.sub_product not like '%null%'  and  length(a.description) > 10 and network_tt_id = 'null' order by rand() limit 10000 "
 ```
 
-# Datset filtering 
+# Dataset filtering 
+
+<div id="dataset filtering"></div>
 
 Removing non-related fields such as trouble ticket key , trouble ticket number , trouble ticket date etc.
 
@@ -322,7 +326,7 @@ plot(importance)
 
 ![My caption.](main_variables.png)
 
-The main variables / factors are :-
+So far , the main variables or factors found are :-
 
 *   cause_code_factor       
 *   resolution_team_factor 
@@ -334,12 +338,12 @@ The main variables / factors are :-
 *   dp_location_factor       
 *   btu_type_factor          
 
-as listed from the importance plot
+as based on the list the importance plot after the tuning and  fitting predictive model process. 
 
 
 ![My caption.](exact.png)
 
-sss
+After the status = Closed
 
 ![My caption.](payment.png)
 
@@ -360,4 +364,138 @@ sss
 
 ![My caption.](roadmap.png)
 
-<p><a href="#1">1</a></p>
+sss
+
+![My caption.](bayes.png)
+
+sss
+
+![My caption.](elicity.png)
+
+sss
+
+![My caption.](comparebn.png)
+
+sss
+
+![My caption.](featureselection.png)
+
+sss
+
+![My caption.](classtime.png)
+
+sss
+
+![My caption.](clusterlook.png)
+
+
+sss
+
+![My caption.](evidence.png)
+
+
+sss
+
+![My caption.](good.png)
+
+
+# Data Cleansing & Transformation 
+
+```{r}
+workflow <- print(grViz("
+digraph {
+# graph attributes
+graph [overlap = true]
+
+node [shape = box,
+        fontname = Calibri,
+        color = blue]
+
+# edge statements
+GET_Zone_Distinct_List -> RETURN_Zone_List -> LOOP_Zone_List -> GENERATE_SQL_filter_by_zone; DESIGN_Base_SQL ->
+APPLY_record_filter -> RECEIVE_Zone_Paramater -> GENERATE_SQL_filter_by_zone ->
+ORDER_records_in_random_mode -> Limit_records_per_zone -> Download_dataset -> Load_in_R->COVERT_dataset_as_dataframe->REMOVE_unrelated_fields;
+Download_dataset-> SAVE_Trouble_Ticket_No_As_Reference;
+Download_dataset-> SAVE_Description_Text_As_Reference;
+}
+"))
+```
+
+* Process Workflow
+
+```{r}
+
+workflow
+
+```
+
+
+  1.  dwdw
+  2.  wdwwd
+  
+* Method
+
+Previously have been mentioned <a href="#dataset filtering">here</a> by applying SQL and condition rules <a href="#dataset rules">here</a>
+
+
+---------
+
+# Journal 1 - Paper
+
+Still in progress.
+
+![My caption.](journal11.png)
+
+
+
+![My caption.](journal12.png)
+
+
+
+
+![My caption.](journal13.png)
+
+
+
+
+![My caption.](journal14.png)
+
+
+
+![My caption.](journal15.png)
+
+
+-----------
+
+
+# Journal 2 - Paper
+
+Still in progress.
+
+![My caption.](journal21.png)
+
+![My caption.](journal22.png)
+
+![My caption.](journal23.png)
+
+
+-----------
+
+# Journal 3 - Paper
+
+Still in progress.
+
+![My caption.](journal31.png)
+
+![My caption.](journal32.png)
+
+![My caption.](journal33.png)
+
+![My caption.](journal34.png)
+
+
+
+
+
+
+
