@@ -1,41 +1,38 @@
 ---
 title: "PHD - Progress update 14/10/2015"
 author: "Fauzy Bin Che Yayah"
-date: "October 14, 2015"
+date: "October 20, 2015"
 output: html_document
 number_sections: yes
 documentclass: article
 classoption: a3paper
 ---
 
-* Why use Bayesian Net ?
+* Why use Bayesian Net in this research ?
     
 1.  To look for the root cause - the dataset is in factor type which is status not a number.
 2.  To find out the probabilistic relationship between the symptom error code and the resolution
-3.  
+3.  Most of the dataset is in factor format which status / state.
+4.  Thus, with this structure we can learn and predicts the outcome by learning the relationship between the elements.
 
 ![My caption.](1.png) 
 
 <div id="1">1</div>
 
+
+Below is the list of literature review regarding Bayesian Net for root cause analysis :-
+
+
 | Citation|Method| Output|Conclusions|
 |-------------:|------------:|-------------:|-------------:|
 |TroubleMiner: Mining network trouble tickets Medem, A. ; Akodjenou, M.-I ; Teixeira, R. 20091|Trouble tickets classification |*  Automation process on clustering the free text inside the description of the trouble tickets. * Choosing the correct keywords for the analysis|Using term frequency distance between trouble tickets and similarity between clusters|
 |Knowledge Discovery from Trouble Ticketing Reports in a Large Telecommunication Company Temprado, Y. ; Garcia, C. ; Molinero, F.J. 2009|Data Mining , Text Mining and Machine Learning , Bayes Net, Naïve Bayes|Prediction on the next action of trouble tickets ,Different snapshots were added to the machine learning algorithm for training|Combination of multiple method to construct the recommendation , Using Bayesian for prediction|
-|A Bayesian Approach To Stochastic Root Finding 2011|x|x|x|
-|A Fully Bayesian Approach For Unit Root Testing 2011 |x|x|x|
-|Online Root-Cause Analysis Of Alarms In Discrete Bayesian 2014|x|x|x|
-|Documents Categorization Based On Bayesian Spanning Tree 2006|x|x|x|
-|Benefits of a Bayesian Approach to Anomaly and Failure 2009|x|x|x|
+|A Bayesian Approach To Stochastic Root Finding 2011|<i>in progress</i>|<i>in progress</i>|<i>in progress</i>|
+|A Fully Bayesian Approach For Unit Root Testing 2011 |<i>in progress</i>|<i>in progress</i>|<i>in progress</i>|
+|Online Root-Cause Analysis Of Alarms In Discrete Bayesian 2014|<i>in progress</i>|<i>in progress</i>|<i>in progress</i>|
+|Documents Categorization Based On Bayesian Spanning Tree 2006|<i>in progress</i>|<i>in progress</i>|<i>in progress</i>|
+|Benefits of a Bayesian Approach to Anomaly and Failure 2009|<i>in progress</i>|<i>in progress</i>|<i>in progress</i>|
 
-
-List of literature review regarding Bayesian Net :-
-
-1.A real-life application of multi-agent systems for fault diagnosis in the provision of an Internet business service
-
-2.A Bayesian Network approach to diagnosing the root cause of failure 
-
-3.sss
 
 ![My caption.](2.png)
 
@@ -88,7 +85,7 @@ Below is the components required and how to set the class path for the Impala dr
 
 ```{r}
 
-
+setwd("D:/Google Drive/PHD/Progress/phdprogress1")
 suppressWarnings(suppressMessages(library("rJava")))
 suppressWarnings(suppressMessages(library("RJDBC")))
 suppressWarnings(suppressMessages(library("dplyr")))
@@ -98,26 +95,41 @@ suppressWarnings(suppressMessages(library("lazy")))
 suppressWarnings(suppressMessages(library("dplyrimpaladb")))
 suppressWarnings(suppressMessages(library("rpart")))
 suppressWarnings(suppressMessages(library("DiagrammeR")))
+suppressWarnings(suppressMessages(library("klaR")))
+suppressWarnings(suppressMessages(library("corrplot")))
+suppressWarnings(suppressMessages(library("readxl")))
+suppressWarnings(suppressMessages(library("tools")))
+suppressWarnings(suppressMessages(library("Rgraphviz")))
+suppressWarnings(suppressMessages(library("SnowballC")))
+suppressWarnings(suppressMessages(library("tm")))
 
+
+#add the class path for Impala jar 
 .jaddClassPath(c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T)))
-
+#add the class path for JVM
 .jinit(classpath = c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T)))
-
+#add the class path for dplyr library
 dplyr.jdbc.classpath = c(list.files(paste(getwd(),"/lib",sep = ''),pattern="jar$",full.names=T))
-
 conn <- src_impaladb(dbname='nova', host='10.54.1.151')
 
 ```
 
-* Zone list
+* Available zone list which can contribute to the dataset
 
 ```{r}
 result <-  tbl(conn, sql("select zone from nova.nova_trouble_ticket where zone <> 'null' group by zone order by zone limit 1000"))
 as.data.frame(result)
 ```
 
+So , i can replace the SQL `like '%ZONE __________ %'` with the zone list above and apply `limit 100` for each group of the zone. Each group combined via `UNION ALL` operation.
 
-* Trouble Ticket Data Dictionary
+Example below :-
+
+
+![My caption.](sql_zone.png)
+
+
+* Trouble Ticket Data Dictionary as reference
 
 ```{r}
 result <-  tbl(conn, sql("select * from nova_trouble_ticket where zone <> 'null' limit 1"))
@@ -188,6 +200,7 @@ Save the class as the data.frame
 ```{r}
 
 df <- as.data.frame(result)
+df_tm <- as.data.frame(result)
 df$contact_name <- NULL
 df$contact_home_phone <- NULL
 df$contact_email_addr <- NULL
@@ -236,12 +249,13 @@ summary(df)
 Looping the columns name and rename it to [column name]+1 as the factor name
 
 
+
 ```{r}
 
 
 for(i in names(df)){
 
-  num <- as.numeric(as.factor(df[,i]))-1
+  num <- as.numeric(as.factor(df[,i]))
   df <- cbind(df,num)
   names(df)[names(df)=="num"] <- paste(names(df[i]),"_factor",sep = "")
   print(paste(names(df[i]),"1",sep = ""))
@@ -249,6 +263,7 @@ for(i in names(df)){
 
 df <- df[27:52]
 names(df)
+write.csv(df,"ctt2014_small.csv")
 
 ```
 
@@ -261,6 +276,8 @@ df <- df[,-nearZeroVar(df)]
 names(df)
 
 ```
+
+# Finding Correlation
 
 Find the correlation between the variables using <b>Pearson</b>.
 
@@ -304,6 +321,9 @@ dev.off()
 ```
 ![My caption.](corrplot.png)
 
+
+# Feature selection
+
 Feature selection process to confirm which variable does become the independent and <b>resolution code</b> is the dependent variable via GBM (Stochastic Gradient Boosting).
 
 List of other available model - http://topepo.github.io/caret/modelList.html
@@ -312,7 +332,8 @@ List of other available model - http://topepo.github.io/caret/modelList.html
 ```{r}
 set.seed(777)
 suppressWarnings(suppressMessages(library(mlbench)))
-control <- trainControl(method = "repeatedcv", number = 10, repeats = 3)
+control <-
+trainControl(method = "repeatedcv", number = 5)
 model <-
 train(
 resolution_code_factor ~ ., data = df, method = "gbm", preProcess = "scale", trControl =
@@ -322,7 +343,7 @@ importance <- varImp(model, scale = TRUE)
 print(importance)
 plot(importance)
 ```
-
+<div id="feature"></div>
 
 ![My caption.](main_variables.png)
 
@@ -343,99 +364,239 @@ as based on the list the importance plot after the tuning and  fitting predictiv
 
 ![My caption.](exact.png)
 
-After the status = Closed
+After the status = Closed inside the trouble ticket dataset.
 
 ![My caption.](payment.png)
 
-sss
-
+Still need to discuss about this. Why we need this dataset ?
 
 ![My caption.](train.png)
-
-sss
-
 ![My caption.](6.png)
 
-sss
+I still do not know when the best time to train the dataset.
+The dataset keep updating every day when :-
+
+* The ticket is created
+* The ticket is closed
+* The ticket has new description filled by the technician during the investigation
+
+I recommend that the dataset need to train for <b>every week </b> because of the size and the velocity of the dataset.
+
+The Bayes model might need to rebuild if the prediction level become lower of the treshold ; i.e < <b>60% accuracy</b>
+
+Basically below is how i acquire the dataset as mention during the previous proposal defense below :-
+
+
+![My caption.](acquiring.png)
+
+<br>
+
+And this is how the implementation will be in the future :-
+
+
+![My caption.](implementation.png)
+
+
+# Prediction
+
+Anyway , this is the basic on how i train the sample dataset ( only for `Kepong Zone` ) using NaiveBayes and make the prediction of the resolution code :-
+
+<div id="bayes"></div>
+
+```{r}
+col_names <- names(df)
+df[,col_names] <- lapply(df[,col_names] , factor)
+names(df)
+# split 70/30 from dataset into training and testing
+trainIndex <- createDataPartition(df$resolution_code_factor, p=0.70, list=FALSE)
+data_train <- df[ trainIndex,]
+data_test <- df[-trainIndex,]
+# train a naive bayes model
+model <- NaiveBayes(as.factor(resolution_code_factor)~., data=data_train)
+# make predictions
+predictions <- suppressWarnings(suppressMessages(predict(model, data_test)))
+# summarize results by predicting resolution code using the test dataset -> data_test
+cm <- suppressWarnings(suppressMessages(confusionMatrix(predictions$class, data_test$resolution_code_factor)))
+cm 
+```
+
+Based on the dataset from Kepong zone , we manage to get the prediction level up to <b>more than 80%</b>
+
 
 ![My caption.](chunk.png)
 
-sss
+So far , I'm only using the 70/30 data partition and also we also can consider to do the cross validattion sampling
+
+Below is the option for 70/30 partition
+
+```r
+trainIndex <- createDataPartition(df$resolution_code_factor, p=0.70, list=FALSE)
+```
+Below is the option for 10 folds of cross validation
+
+```r
+trainControl(method = "repeatedcv", number = 10, repeats = 3)
+
+```
+
 
 ![My caption.](roadmap.png)
 
-sss
+Mention <a href="#dataset filtering">here</a> on how to clean and filter the data via the SQL statement using Impala
+
 
 ![My caption.](bayes.png)
 
-sss
+The sample dataset have been converted into a factor and been applied <a href="#bayes">here</a> 
+
+Sample dataset after converted into factor which is required by the Bayes algorithm :-
+
+```{r}
+head(df)
+```
 
 ![My caption.](elicity.png)
 
-sss
+Done that <a href="#bayes">here</a>  and how to select the independent variables been mention <a href="#feature">here</a> via the rank of the important factor
+
 
 ![My caption.](comparebn.png)
 
-sss
+I'm still working on the other method such as Random Forest , GBM and RPart. We need to discuss on this
 
 ![My caption.](featureselection.png)
 
-sss
+Tried before on how to do the feature selection via Generalized Boosted Regression <a href="#feature">here</a>
 
 ![My caption.](classtime.png)
 
-sss
+I'm thinking on clustering the cause code & the resolution code because of the unique count each of them is around
+
+* Cause code -> 1900++ unique value
+* Resolution code -> 1900++ unique value
+* Symptom Error code -> 400++ unique value
+
+I also have some reference on the category of the cause code. So far the cause code can be divided into :-
+
+* 3RD PARTY
+* Active  <- `I'm only choose this type because most Trouble Ticket is related to the Active elements type`
+* CORE
+* CPE
+* CU
+* Customer
+* IPTV
+* IW
+* NETWORK
+* Network
+* NFF
+* NGN/Switch
+* NTT
+* Others
+* Passive
+* RADAS
+
+So the clustering of the cause code & resolution is needed to reduce the size and become more manageble. So we can find the relationship among the variables.
 
 ![My caption.](clusterlook.png)
 
 
-sss
+Need to disucss and I will do this later
 
 ![My caption.](evidence.png)
 
 
-sss
+Need to discuss on this
 
 ![My caption.](good.png)
+
+Need to discuss on this
 
 
 # Data Cleansing & Transformation 
 
 ```{r}
-workflow <- print(grViz("
-digraph {
-# graph attributes
-graph [overlap = true]
+# workflow <- print(grViz("
+# digraph neato  {
+# 
+# 
+# ratio = \"fill\";
+# size=\"8.3,11.7!\";
+# margin=0;
+# 
+# # graph attributes
+# graph [overlap = true, fontsize = 10]
+# 
+# node [shape = box,style = filled,
+#         fontname = Arial,
+#         color = darkslategray , fillcolor = orange]
+# 
+# # edge statements
+# edge [color = grey]
+# GET_Zone_Distinct_List -> RETURN_Zone_List -> LOOP_Zone_List -> GENERATE_SQL_filter_by_zone; DESIGN_Base_SQL ->
+# APPLY_record_filter -> RECEIVE_Zone_Paramater -> GENERATE_SQL_filter_by_zone ->
+# ORDER_records_in_random_mode -> Limit_records_per_zone -> Download_dataset -> Load_in_R->COVERT_dataset_as_dataframe->REMOVE_unrelated_fields->FETCH_sample_dataset->Split_70_30_for_training_and_testing->APPLY_feature_extraction->GET_related_field_for_training->APPLY_training_from_dataset->BUILD_model_from_training;
+# Download_dataset-> SAVE_Trouble_Ticket_No_As_Reference;
+# Download_dataset-> SAVE_Description_Text_As_Reference;
+# }
+# "),engine = "neato")
+# c<- grVizOutput(workflow)
 
-node [shape = box,
-        fontname = Calibri,
-        color = blue]
-
-# edge statements
-GET_Zone_Distinct_List -> RETURN_Zone_List -> LOOP_Zone_List -> GENERATE_SQL_filter_by_zone; DESIGN_Base_SQL ->
-APPLY_record_filter -> RECEIVE_Zone_Paramater -> GENERATE_SQL_filter_by_zone ->
-ORDER_records_in_random_mode -> Limit_records_per_zone -> Download_dataset -> Load_in_R->COVERT_dataset_as_dataframe->REMOVE_unrelated_fields;
-Download_dataset-> SAVE_Trouble_Ticket_No_As_Reference;
-Download_dataset-> SAVE_Description_Text_As_Reference;
-}
-"))
 ```
 
-* Process Workflow
 
-```{r}
-
-workflow
-
-```
+* Process Workflow (in Progress)
 
 
-  1.  dwdw
-  2.  wdwwd
-  
+![My caption.](wflow.png)
+
+
+The example shows the process workflow 
+
 * Method
 
 Previously have been mentioned <a href="#dataset filtering">here</a> by applying SQL and condition rules <a href="#dataset rules">here</a>
+
+
+# Text Mining and Category Identification
+
+During my last proposal defense , i proposed to develop the dictionary vector as the enrichment source for the trouble ticket prediction and also to identify the category of the messages.
+
+
+![My caption.](dicvector.png)
+
+I have done some simple code in R to demonstrate this :-
+
+```{r}
+df_tm <- data.frame(df_tm$description , stringsAsFactors = TRUE)
+mycorpus <- Corpus(DataframeSource(df_tm))
+# remove all unrelated char/text
+tdm <- TermDocumentMatrix(mycorpus, control = list(weight = weightTfIdf  ,
+removePunctuation = TRUE, stopwords = TRUE , removeNumbers = TRUE , stemming  = FALSE))
+# remove sparse term
+#z <- m[c("oil", "zone"),
+tdm <- removeSparseTerms(tdm, sparse= 0.8 )
+# Generate the dictionary vector limit by 10 docs
+c <- suppressWarnings(suppressMessages(inspect(tdm[,1:10])))
+# Plotting the relationship between words
+plot(tdm, corThreshold = 0.2, weighting = TRUE)
+
+
+```
+
+So this dictionary vector can be used in the future to add on to the current dataset as the new variables.
+
+```{r}
+ # disable this code due to lots of messages appears
+ # transpose_tdm<- invisible(as.data.frame(inspect(t(tdm[,]))))
+ # disable this code due to lots of messages appears
+ # cause_code_tdm <- cbind(cbind(df$tt_row_id,df$cause_code),transpose_tdm[1:10,1:10])
+ # write to CSV
+ # write.csv(cause_code_tdm,"transpose_tdm.csv")
+ transpose_tdm <- read.csv("transpose_tdm.csv")  
+ head(transpose_tdm)
+```
+
+We need to discuss this further.
 
 
 ---------
@@ -444,24 +605,12 @@ Previously have been mentioned <a href="#dataset filtering">here</a> by applying
 
 Still in progress.
 
+Submission date ?
+
 ![My caption.](journal11.png)
-
-
-
 ![My caption.](journal12.png)
-
-
-
-
 ![My caption.](journal13.png)
-
-
-
-
 ![My caption.](journal14.png)
-
-
-
 ![My caption.](journal15.png)
 
 
@@ -470,7 +619,9 @@ Still in progress.
 
 # Journal 2 - Paper
 
-Still in progress.
+Still in progress. Need to discuss.
+
+Submission date ?
 
 ![My caption.](journal21.png)
 
@@ -483,7 +634,9 @@ Still in progress.
 
 # Journal 3 - Paper
 
-Still in progress.
+Still in progress. Need to discuss.
+
+Submission date ?
 
 ![My caption.](journal31.png)
 

@@ -1,0 +1,1001 @@
+,trouble_ticket_id,Cause_code,acc,account,acct,acknowledge,active,address,addressing,advice,advise,advised
+1,1-WTJASD,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+2,1-WTJ924,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+3,1-WTJPNC,Drop Fiber Damage,1,2,1,0,1,3,1,0,0,0
+4,1-WTGIQE,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+5,1-WTI5UQ,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+6,1-WTDQ9Q,AccessNetwork_Failure,0,4,1,0,1,2,1,1,0,1
+7,1-WTFZ2N,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+8,1-WTCXHB,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+9,1-WTCNKV,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+10,1-WTCH37,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+11,1-WTAWUC,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+12,1-WTCRT6,TM_FTB FASC Connector Faulty,0,1,1,0,1,2,1,3,0,0
+13,1-WT97CR,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+14,1-WT8XU8,STB_Faulty,0,1,2,0,1,4,1,3,0,0
+15,1-WT8NSR,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+16,1-WT9WA8,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+17,1-WT8EOX,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+18,1-WT76H0,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+19,1-WT81V1,Cust_PC Issue/Faulty,0,3,1,1,1,2,1,3,3,0
+20,1-WT5791,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+21,1-WSX2GO,TM_CPE_PG Config Problem,0,1,1,0,1,3,1,1,0,0
+22,1-WSYWHF,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+23,1-WSUMSK,Other_Fault,1,2,1,0,1,3,1,0,0,0
+24,1-WSXF7V,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+25,1-WSW6ES,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+26,1-WSVBBV,Caused By NTT,0,4,1,0,1,2,1,1,0,1
+27,1-WSWYYC,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+28,1-WSRFGI,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+29,1-WSR6BQ,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+30,1-WSQN4N,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+31,1-WSNJRR,EQMT_GE port faulty,0,1,1,0,1,3,1,1,0,0
+32,1-WSMV6J,Caused By NTT,0,1,1,0,1,2,1,3,0,0
+33,1-WSM9VP,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+34,1-WSK8ES,EQMT_GE port faulty,0,1,2,0,1,4,1,3,0,0
+35,1-WSL5XG,*MSAN_ForceMajure,1,2,1,0,1,2,1,2,0,1
+36,1-WSJCT0,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+37,1-WSJ74V,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+38,1-WSJYGG,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+39,1-WSGSW7,Caused By NTT,0,3,1,1,1,2,1,3,3,0
+40,1-WSIXRM,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+41,1-WSIUHK,Caused By NTT,0,1,1,0,1,3,1,1,0,0
+42,1-WS1BXQ,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+43,1-WS7274,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+44,1-WS57VK,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+45,1-WS1BNA,Caused By NTT,1,2,1,0,1,2,1,2,0,1
+46,1-WRXVM0,TM_CPE_IW_RJ11 Faulty,0,4,1,0,1,2,1,1,0,1
+47,1-WS2VY8,Caused By NTT,0,4,1,0,1,2,1,1,0,0
+48,1-WS2QHU,Caused By NTT,0,2,1,0,1,2,1,1,0,2
+49,1-WS1Q62,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+50,1-WRYPGN,Caused By NTT,0,1,1,0,0,2,0,2,0,0
+51,1-WS28XF,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+52,1-WRXMF9,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+53,1-WRT8AN,User_Account,1,2,1,0,1,3,1,0,0,0
+54,1-WRV13O,TM_CPE_IW_RJ11 Faulty,0,1,2,0,1,4,1,3,0,0
+55,1-WRWWD8,Other_Fault,1,2,1,0,1,2,1,2,0,1
+56,1-WRVIDB,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+57,1-WRVIYS,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+58,1-WRVSBQ,Caused By NTT,0,2,1,0,1,2,1,1,0,2
+59,1-WRRFGM,Caused By NTT,0,3,1,1,1,2,1,3,3,0
+60,1-WRNF2Z,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+61,1-WRRZ0J,Caused By NTT,0,1,1,0,1,3,1,1,0,0
+62,1-WRRWVN,Caused By NTT,0,1,1,0,1,2,1,3,0,0
+63,1-WRRWWC,HomePlug_Faulty,1,2,1,0,1,3,1,0,0,0
+64,1-WRNEXI,Caused By NTT,0,1,2,0,1,4,1,3,0,0
+65,1-WRQ2JY,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+66,1-WRRGFM,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+67,1-WRQ77W,Caused By NTT,0,4,1,0,1,2,1,1,0,0
+68,1-WRO6MC,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+69,1-WRNVHU,Other_Fault,0,3,1,1,1,2,1,3,3,0
+70,1-WRIJ8Q,Caused By NTT,0,1,1,0,0,2,0,2,0,0
+71,1-WRKNEP,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+72,1-WRIQ7I,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+73,1-WRI57N,Other_Fault,1,2,1,0,1,3,1,0,0,0
+74,1-WRF8TF,Known_NTT Fault,0,1,2,0,1,4,1,3,0,0
+75,1-WRGMAM,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+76,1-WRFH5P,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+77,1-WRE9LA,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+78,1-WREBT4,TM_CPE_STB_Cable_HDMI,0,2,1,0,1,2,1,1,0,2
+79,1-WRALR8,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+80,1-WRC3YW,Caused By NTT,0,1,1,0,0,2,0,2,0,0
+81,1-WRA7B6,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+82,1-WR9R1T,TM_IW Fiber Patch Cord,0,1,1,0,1,2,1,3,0,0
+83,1-WR86BG,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+84,1-WR7PS6,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+85,1-WR42Q0,Premise Closed,1,2,1,0,1,2,1,2,0,1
+86,1-WR52QX,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+87,1-WQX2YM,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,0
+88,1-WQWP01,Caused By NTT,0,2,1,0,1,2,1,1,0,2
+89,1-15VCYH3,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+90,1-15VFNC2,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+91,1-15VDDPX,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+92,1-15VDDLP,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+93,1-15VCYFE,Customer_Internal Wiring,1,2,1,0,1,3,1,0,0,0
+94,1-15VDDNG,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+95,1-15VC7DQ,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+96,1-15VCYE1,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+97,1-15VH7LB,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+98,1-15VEXDA,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+99,1-15VG47D,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+100,1-15VD6SB,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+101,1-15VC0QE,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+102,1-15V88P5,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+103,1-15VGQQL,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+104,1-15VBDL6,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+105,1-15VA3YO,Planned Maintenance Work (PMW),1,2,1,0,1,2,1,2,0,1
+106,1-15VALNC,Customer_Cancel TT,0,4,1,0,1,2,1,1,0,1
+107,1-15VE0QK,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+108,1-15VDVCU,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+109,1-15VD6M2,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+110,1-15VCY6N,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+111,1-15VDC0J,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+112,1-15V88LU,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+113,1-15VDS3D,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+114,1-15VDBYF,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+115,1-15V3TW3,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+116,1-15VE0OX,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+117,1-15VDDGJ,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+118,1-15VCEZ6,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+119,1-15V9YFY,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+120,1-15VBDA4,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+121,1-15V8TT2,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+122,1-15VAFG0,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+123,1-15VD6GT,EQMT_GE port faulty,1,2,1,0,1,3,1,0,0,0
+124,1-15V1PM1,Customer Defer Appointment,0,1,2,0,1,4,1,3,0,0
+125,1-15VCS2M,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+126,1-15V5NLP,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+127,1-15VCETL,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+128,1-15V3TWB,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+129,1-15VALB4,ONU_Faulty,0,3,1,1,1,2,1,3,3,0
+130,1-15VCRZA,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+131,1-15V707Q,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+132,1-15V95TY,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+133,1-15V8TOO,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+134,1-15V7LRN,Planned Maintenance Work (PMW),0,1,2,0,1,4,1,3,0,0
+135,1-15V1PK3,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+136,1-15V704X,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+137,1-15V70Q5,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+138,1-15V7LP1,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+139,1-15V2BTM,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+140,1-15V8Q81,EQMT_GE port faulty,0,1,1,0,0,2,0,2,0,0
+141,1-15VBD41,TM_CPE_PG Config Problem,0,1,1,0,1,3,1,1,0,0
+142,1-15V70OW,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+143,1-15V67KP,TM_CPE_PG Config Problem,1,2,1,0,1,3,1,0,0,0
+144,1-15V6ZZ5,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+145,1-15V7VDB,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+146,1-15VBD09,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,1
+147,1-15V1PGJ,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+148,1-15V9Y1B,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+149,1-15V5NCN,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+150,1-15V5NBH,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+151,1-15V64IR,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+152,1-15V8M93,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+153,1-15V3TP0,Known_NTT Fault,1,2,1,0,1,3,1,0,0,0
+154,1-15V8M9P,Planned Maintenance Work (PMW),0,1,2,0,1,4,1,3,0,0
+155,1-15V6D18,TM_CPE_PG Config Problem,1,2,1,0,1,2,1,2,0,1
+156,1-15V11L2,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+157,1-15V7LEB,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+158,1-15V77EW,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+159,1-15V64G5,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+160,1-15V6LBB,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+161,1-15V7597,Cabinet/SDF Jumper Faulty,0,1,1,0,1,3,1,1,0,0
+162,1-15V7LAL,Known_NTT Fault,0,1,1,0,1,2,1,3,0,0
+163,1-15V77AG,Customer Defer Appointment,1,2,1,0,1,3,1,0,0,0
+164,1-15V6ZS4,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+165,1-15V7L6T,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+166,1-15V7L2Y,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+167,1-15V6ZOY,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+168,1-15V21U7,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+169,1-15V58QQ,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+170,1-15V6G2Z,TM_CPE_PG Config Problem,0,1,1,0,0,2,0,2,0,0
+171,1-15V6M1F,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+172,1-15V21R9,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+173,1-15V2UUS,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+174,1-15V6KVY,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+175,1-15V6L1A,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+176,1-15V6LMB,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+177,1-15V11EQ,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+178,1-15V3TF7,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+179,1-15V6GDE,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+180,1-15V676P,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+181,1-15V6CEH,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+182,1-15V1G6A,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+183,1-15V3TCF,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+184,1-15V32X4,Other_Fault,0,1,2,0,1,4,1,3,0,0
+185,1-15V5MXB,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+186,1-15V3T39,BRASNetwork_Failure,0,4,1,0,1,2,1,1,0,1
+187,1-15V32V6,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,0
+188,1-15V5BGS,Other_Fault,0,2,1,0,1,2,1,1,0,2
+189,1-15V4UWT,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+190,1-15V45D9,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+191,1-15V3TB0,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+192,1-15V41VS,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+193,1-15V2UND,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+194,1-15V0VGD,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+195,1-15V2TYT,Customer Defer Appointment,1,2,1,0,1,2,1,2,0,1
+196,1-15V272L,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+197,1-15UVEP1,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+198,1-15V1B1O,Customer Defer Appointment,0,2,1,0,1,2,1,1,0,2
+199,1-15V0UYH,Customer Defer Appointment,0,3,1,1,1,2,1,3,3,0
+200,1-15V1K9T,VDSL Modem Config Problem,0,1,1,0,0,2,0,2,0,0
+201,1-15UZT6C,Other_Fault,0,1,1,0,1,3,1,1,0,0
+202,1-15UZA7E,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+203,1-15UXAXJ,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+204,1-15UVEMA,EQMT_Control card hang,0,1,2,0,1,4,1,3,0,0
+205,1-15UWKY9,MSAN_VDSL_Port_Inactive,1,2,1,0,1,2,1,2,0,1
+206,1-15UVCVB,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+207,1-15UVI15,Customer Defer Appointment,0,4,1,0,1,2,1,1,0,0
+208,1-15UTN8I,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+209,1-15UPNZQ,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+210,1-15UTDD7,EQMT_VLAN problem,0,1,1,0,0,2,0,2,0,0
+211,1-15UTYED,EQMT_VLAN problem,0,1,1,0,1,3,1,1,0,0
+212,1-15URHO7,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+213,1-15UKZDX,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+214,1-15UNTMX,TM_CPE_STB Faulty,0,1,2,0,1,4,1,3,0,0
+215,1-15UMBHZ,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+216,1-15UFILV,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+217,1-15UIJJB,Customer_Internal Wiring,0,4,1,0,1,2,1,1,0,0
+218,1-15UGLCX,TM_CPE_PG Faulty,0,2,1,0,1,2,1,1,0,2
+219,1-15UCXU8,Drop Fiber Damage,0,3,1,1,1,2,1,3,3,0
+220,1-15U8D5T,VDSL Modem Config Problem,0,1,1,0,0,2,0,2,0,0
+221,1-15U6C5R,TM_FTB FASC Connector Faulty,0,1,1,0,1,3,1,1,0,0
+222,1-15U6ETL,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+223,1-15U4ZWT,Customer_Cancel TT,1,2,1,0,1,3,1,0,0,0
+224,1-15TQHZ1,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+225,1-15TQTSH,User_Account,1,2,1,0,1,2,1,2,0,1
+226,1-15TNS8C,MSAN patch cord at cabinet,0,4,1,0,1,2,1,1,0,1
+227,1-15TNFYX,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+228,1-15TMPQI,TM_CPE_PG Faulty,0,2,1,0,1,2,1,1,0,2
+229,1-15TL2G6,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+230,1-15TL2AD,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+231,1-15TKB4T,TM_CPE_PG Config Problem,0,1,1,0,1,3,1,1,0,0
+232,1-15TGJVU,EQMT_Control card hang,0,1,1,0,1,2,1,3,0,0
+233,1-15TH3O1,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+234,1-15TCN2V,ONU_Faulty,0,1,2,0,1,4,1,3,0,0
+235,1-15TGJLO,Drop Fiber Damage,1,2,1,0,1,2,1,2,0,1
+236,1-15TEFXB,TM_CPE_STB Faulty,0,4,1,0,1,2,1,1,0,1
+237,1-15TCX4I,VDSL Modem Config Problem,0,4,1,0,1,2,1,1,0,0
+238,1-15TCX29,TM_CPE_PG Faulty,0,2,1,0,1,2,1,1,0,2
+239,1-15T92Q5,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+240,1-15TBAJV,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+241,1-15T8TB0,TM_CPE_PG_Wireless Coverage,0,1,1,0,1,3,1,1,0,0
+242,1-15T8JIB,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+243,1-15T7W0A,Cust_PC Issue/Faulty,1,2,1,0,1,3,1,0,0,0
+244,1-15T65PD,Cabinet/SDF Jumper Faulty,0,1,2,0,1,4,1,3,0,0
+245,1-15T5KQZ,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+246,1-15T5U77,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+247,1-15T4J1M,FOC_E/S Core Break,0,4,1,0,1,2,1,1,0,0
+248,1-15T65E0,User_Account,0,2,1,0,1,2,1,1,0,2
+249,1-15T36OQ,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+250,1-15T100F,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+251,1-15T0ULX,TM_CPE_DectPhone Faulty,0,1,1,0,1,3,1,1,0,0
+252,1-15T0PXO,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+253,1-15T041Q,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+254,1-15SZT7B,Cabinet/SDF Jumper Faulty,0,1,2,0,1,4,1,3,0,0
+255,1-15SVPRI,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+256,1-15SY3W3,EQMT_OLT configuration lost,0,4,1,0,1,2,1,1,0,1
+257,1-15SW6SD,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,0
+258,1-15SXA89,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+259,1-15SVZK9,EQMT_MSAN configuration lost,0,3,1,1,1,2,1,3,3,0
+260,1-15S7VXD,VDSL Modem Faulty,0,1,1,0,0,2,0,2,0,0
+261,1-15SU8LG,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+262,1-15SEBU7,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+263,1-15SUGTT,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+264,1-15RXR0N,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+265,1-15SNSSN,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+266,1-15S7TUH,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+267,1-15S9OW3,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+268,1-15S97W9,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+269,1-15ROUTS,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+270,1-15RVL3G,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+271,1-15RVL2J,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+272,1-15S5SJ2,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+273,1-15ROUS1,Planned Maintenance Work (PMW),1,2,1,0,1,3,1,0,0,0
+274,1-15RY0B6,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+275,1-15ROUQF,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+276,1-15RWI84,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+277,1-15RVRV9,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+278,1-15RZY4Z,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+279,1-15ROUOX,TM_CPE_PG Faulty,0,3,1,1,1,2,1,3,3,0
+280,1-15RRZXZ,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+281,1-15RTI2M,TM_CPE_STB Hang,0,1,1,0,1,3,1,1,0,0
+282,1-15RWOZ7,TM_CPE_PG Faulty,0,1,1,0,1,2,1,3,0,0
+283,1-15RKDAT,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+284,1-15ROUX9,EQMT_MSAN VDSL2 card faulty,0,1,2,0,1,4,1,3,0,0
+285,1-15ROXE5,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+286,1-15RL6PC,Other_Fault,0,4,1,0,1,2,1,1,0,1
+287,1-15RFQUH,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+288,1-15RKACI,VDSL Modem Faulty,0,2,1,0,1,2,1,1,0,2
+289,1-28NBZ7Z,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+290,1-28NB1AP,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+291,1-28NES8P,TM_CPE_PG Config Problem,0,1,1,0,1,3,1,1,0,0
+292,1-28NF8ZI,MSAN patch cord at cabinet,0,1,1,0,1,2,1,3,0,0
+293,1-28N7Y71,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+294,1-28N56RF,User_Account,0,1,2,0,1,4,1,3,0,0
+295,1-28N7OBL,Other_Fault,1,2,1,0,1,2,1,2,0,1
+296,1-28N6BFB,FOC_D/S Cable Damage,0,4,1,0,1,2,1,1,0,1
+297,1-28N448E,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+298,1-28MZCHF,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+299,1-28N1BNF,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+300,1-28MSSMS,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+301,1-28MLVUJ,VDSL Modem Config Problem,0,1,1,0,1,3,1,1,0,0
+302,1-28MS80X,TM_CPE_IW_RJ11 Faulty,0,1,1,0,1,2,1,3,0,0
+303,1-28MLZFX,Customer_Tie\Riser Low Quality,1,2,1,0,1,3,1,0,0,0
+304,1-28M95EL,FDP_FASC Connector Faulty,0,1,2,0,1,4,1,3,0,0
+305,1-28MJ7TJ,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+306,1-28LZCFG,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+307,1-28M0GC3,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+308,1-28LI0SN,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+309,1-28LR7FJ,VDSL Modem Config Problem,0,3,1,1,1,2,1,3,3,0
+310,1-28LLCH0,TM_CPE_PG Config Problem,0,1,1,0,0,2,0,2,0,0
+311,1-28LOGJA,Other_Fault,0,1,1,0,1,3,1,1,0,0
+312,1-28LBLQO,Other_Fault,0,1,1,0,1,2,1,3,0,0
+313,1-28L9DMD,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+314,1-28LAHYC,FOC_D/S Cable Damage,0,1,2,0,1,4,1,3,0,0
+315,1-28L4UTA,FOC_D/S Cable Damage,1,2,1,0,1,2,1,2,0,1
+316,1-28L0DOQ,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,1
+317,1-28L72RF,FDP_Damage,0,4,1,0,1,2,1,1,0,0
+318,1-28KTWO3,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+319,1-28KMBAF,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+320,1-28KQ6KH,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+321,1-28J7B4H,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+322,1-28KMYB8,ONU_Power Adaptor,0,1,1,0,1,2,1,3,0,0
+323,1-28HM9TA,TM_FTB FASC Connector Faulty,1,2,1,0,1,3,1,0,0,0
+324,1-28IKB6L,Customer_Internal Wiring,0,1,2,0,1,4,1,3,0,0
+325,1-28KMY45,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+326,1-28HO2R5,STB_Faulty,0,4,1,0,1,2,1,1,0,1
+327,1-28HQDQD,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,0
+328,1-28HWZOA,Customer Defer Appointment,0,2,1,0,1,2,1,1,0,2
+329,1-28HNL41,Cabinet/SDF Jumper Faulty,0,3,1,1,1,2,1,3,3,0
+330,1-28HNODJ,FDP_Damage,0,1,1,0,0,2,0,2,0,0
+331,1-28HBOKT,Customer_Tie\Riser Low Quality,0,1,1,0,1,3,1,1,0,0
+332,1-28HG6R9,Drop Fiber Damage,0,1,1,0,1,2,1,3,0,0
+333,1-28HL4BD,Other_Fault,1,2,1,0,1,3,1,0,0,0
+334,1-28GC7PB,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+335,1-28G99WO,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+336,1-28GRX8A,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,1
+337,1-28FZJGP,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+338,1-28FW09C,TM_FTB FASC Connector Faulty,0,2,1,0,1,2,1,1,0,2
+339,1-28FZ0P1,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+340,1-28G7QT3,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+341,1-28FXRUY,Customer Defer Appointment,0,1,1,0,1,3,1,1,0,0
+342,1-28FU5FV,TM_CPE_PG Faulty,0,1,1,0,1,2,1,3,0,0
+343,1-28FUN38,Cust_PhoneWallSocketFaulty,1,2,1,0,1,3,1,0,0,0
+344,1-28FRHQ2,Customer Defer Appointment,0,1,2,0,1,4,1,3,0,0
+345,1-28FJDFV,Cabinet/SDF Jumper Faulty,1,2,1,0,1,2,1,2,0,1
+346,1-28FGG04,STB_Faulty,0,4,1,0,1,2,1,1,0,1
+347,1-28F4KL6,TM_CPE_IW_RJ11 Faulty,0,4,1,0,1,2,1,1,0,0
+348,1-28FJ8LS,EQMT_GE port faulty,0,2,1,0,1,2,1,1,0,2
+349,1-28FGFVF,TM_CPE_PG Hang,0,3,1,1,1,2,1,3,3,0
+350,1-28FCRTB,VDSL Modem Config Problem,0,1,1,0,0,2,0,2,0,0
+351,1-28F33BE,Cabinet/SDF Jumper Faulty,0,1,1,0,1,3,1,1,0,0
+352,1-28F3NR8,Customer Defer Appointment,0,1,1,0,1,2,1,3,0,0
+353,1-28F3TD1,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+354,1-28F0D4N,Drop Fiber Damage,0,1,2,0,1,4,1,3,0,0
+355,1-28ER2HK,TM_FTB FASC Connector Faulty,1,2,1,0,1,2,1,2,0,1
+356,1-28EXF63,FOC_D/S Cable Damage,0,4,1,0,1,2,1,1,0,1
+357,1-28EWGE5,Cabinet/SDF Jumper Faulty,0,4,1,0,1,2,1,1,0,0
+358,1-28EO0W2,ONU_Faulty,0,2,1,0,1,2,1,1,0,2
+359,1-28EJ77H,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+360,1-28EO0DF,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+361,1-28EL4KG,TM_CPE_PG Config Problem,0,1,1,0,1,3,1,1,0,0
+362,1-28EE9KP,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+363,1-28EK10S,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+364,1-28EH433,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+365,1-WQUE8T,Caused By NTT,1,2,1,0,1,2,1,2,0,1
+366,1-WQO0IM,Premise Closed,0,4,1,0,1,2,1,1,0,1
+367,1-WQTRII,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+368,1-WQTB9M,TM_CPE_STB Faulty,0,2,1,0,1,2,1,1,0,2
+369,1-WQNXRQ,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+370,1-WQII6V,HomePlug_Faulty,0,1,1,0,0,2,0,2,0,0
+371,1-WQN070,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+372,1-WQN4XP,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+373,1-WQIUDF,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+374,1-WQGN14,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+375,1-WQJ85A,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+376,1-WQI77Z,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+377,1-WQH7SA,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+378,1-WQI6AY,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+379,1-WQH7GS,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+380,1-WQITTT,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+381,1-WQH3NR,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+382,1-WQGHH7,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+383,1-WQH76D,User_Account,1,2,1,0,1,3,1,0,0,0
+384,1-WQE7DQ,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+385,1-WQF5W3,EQMT_MSAN configuration lost,1,2,1,0,1,2,1,2,0,1
+386,1-WQ8NQ0,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+387,1-WQ98YP,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+388,1-WQ8630,TM_FTB FASC Connector Faulty,0,2,1,0,1,2,1,1,0,2
+389,1-WQ7N69,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+390,1-WQ3LQF,Other_Fault,0,1,1,0,0,2,0,2,0,0
+391,1-WQ51TM,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+392,1-WQ0NG8,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+393,1-WQ0B2F,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+394,1-WQ2B0B,TM_FTB FASC Connector Faulty,0,1,2,0,1,4,1,3,0,0
+395,1-WPZ3PK,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+396,1-WPY86H,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,1
+397,1-WPYKUO,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+398,1-WPYKS8,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+399,1-WPX7T6,Cabinet/SDF Jumper Faulty,0,3,1,1,1,2,1,3,3,0
+400,1-WPX2KI,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+401,1-WPU8GV,Cust_PhoneWallSocketFaulty,0,1,1,0,1,3,1,1,0,0
+402,1-WPV6J6,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+403,1-WPV11X,TM_CPE_DectPhone Faulty,1,2,1,0,1,3,1,0,0,0
+404,1-WPUGUI,TM_CPE_PG Faulty,0,1,2,0,1,4,1,3,0,0
+405,1-WPSUPU,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+406,1-WPSC58,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+407,1-WPRCSQ,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+408,1-WPQ56W,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+409,1-WPQ2QY,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+410,1-WPQGDM,TM_CPE_DectPhone Faulty,0,1,1,0,0,2,0,2,0,0
+411,1-WPNI9L,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+412,1-WPNKAR,TM_CPE_PG Faulty,0,1,1,0,1,2,1,3,0,0
+413,1-WPJN02,TM_FTB FASC Connector Faulty,1,2,1,0,1,3,1,0,0,0
+414,1-WPJDCT,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+415,1-WPFMMZ,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+416,1-WPD0UK,TM_FTB FASC Connector Faulty,0,4,1,0,1,2,1,1,0,1
+417,1-WPD62C,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+418,1-WP7VKW,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+419,1-WP3YUZ,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+420,1-WOY098,VDSL Modem Faulty,0,1,1,0,0,2,0,2,0,0
+421,1-WOZJ4Y,Other_Fault,0,1,1,0,1,3,1,1,0,0
+422,1-WOSMLX,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+423,1-WOVU0W,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+424,1-WOVQC8,TM_CPE_PG Faulty,0,1,2,0,1,4,1,3,0,0
+425,1-WOXZM6,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+426,1-WOXZJN,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+427,1-WOV9UJ,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+428,1-WOSG08,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+429,1-WOU892,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+430,1-WOSPCZ,Other_Fault,0,1,1,0,0,2,0,2,0,0
+431,1-WOU0X9,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+432,1-WOSP5N,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+433,1-WOQOEB,Other_Fault,1,2,1,0,1,3,1,0,0,0
+434,1-WORDBE,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+435,1-WORYTE,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+436,1-WOR6AP,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+437,1-WORD3Q,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,0
+438,1-WOODFW,VDSL Modem Config Problem,0,2,1,0,1,2,1,1,0,2
+439,1-WONEM9,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+440,1-WOMVKH,VDSL_Modem_Hang,0,1,1,0,0,2,0,2,0,0
+441,1-WOMEF6,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+442,1-WOLVIU,Cabinet/SDF Jumper Faulty,0,1,1,0,1,2,1,3,0,0
+443,1-WOLVHU,TM_FTB FASC Connector Faulty,1,2,1,0,1,3,1,0,0,0
+444,1-WOLXP7,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+445,1-WOLIFK,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+446,1-3FFT6T7,FOC_Tie cable problem,0,4,1,0,1,2,1,1,0,1
+447,1-3FFRZ90,Other_Fault,0,4,1,0,1,2,1,1,0,0
+448,1-3FFKETQ,Customer_Not Reachable,0,2,1,0,1,2,1,1,0,2
+449,1-3FFGMUD,TM_CPE_DectPhone Faulty,0,3,1,1,1,2,1,3,3,0
+450,1-3FF5F8X,FDP_FASC Connector Faulty,0,1,1,0,0,2,0,2,0,0
+451,1-3FEXPWO,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+452,1-3FEXB0Y,EQMT_VLAN problem,0,1,1,0,1,2,1,3,0,0
+453,1-3FEXMEM,TM_CPE_PG Hang,1,2,1,0,1,3,1,0,0,0
+454,1-3FEV9PU,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+455,1-3FEY49M,ONU_Power Adaptor,1,2,1,0,1,2,1,2,0,1
+456,1-3FEF4OB,Other_Fault,0,4,1,0,1,2,1,1,0,1
+457,1-3FE48C1,Cut-Core Brittle /Broken,0,4,1,0,1,2,1,1,0,0
+458,1-3FDV9W8,FOC_D/S Cable Damage,0,2,1,0,1,2,1,1,0,2
+459,1-3FBHTQR,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+460,1-3FBI8TW,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+461,1-3FBGQ5S,TM_CPE_PG Faulty,0,1,1,0,1,3,1,1,0,0
+462,1-3FB6SHA,EQMT_GE port faulty,0,1,1,0,1,2,1,3,0,0
+463,1-3FB4WTP,VDSL_Modem Power Adaptor,1,2,1,0,1,3,1,0,0,0
+464,1-3FAT5RP,Customer Defer Appointment,0,1,2,0,1,4,1,3,0,0
+465,1-3FBAJ6Q,Customer Defer Appointment,1,2,1,0,1,2,1,2,0,1
+466,1-3FB8XMT,Drop Fiber Damage by pest,0,4,1,0,1,2,1,1,0,1
+467,1-3FB88HD,TM_IW Fiber Patch Cord,0,4,1,0,1,2,1,1,0,0
+468,1-3FB4UJJ,EQMT_GE port faulty,0,2,1,0,1,2,1,1,0,2
+469,1-3FB2M7P,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+470,1-3FAYYWN,TM_CPE_IW_RJ11 Faulty,0,1,1,0,0,2,0,2,0,0
+471,1-3FAZZT1,D/S Pair Faulty,0,1,1,0,1,3,1,1,0,0
+472,1-3FAQVVZ,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+473,1-3FAMGTM,TM_CPE_STB Config Problem,1,2,1,0,1,3,1,0,0,0
+474,1-3FAQ7YV,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+475,1-3FAL8U0,Cabinet/SDF Jumper Faulty,1,2,1,0,1,2,1,2,0,1
+476,1-3FAOYS2,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+477,1-3FAEHBZ,TM_CPE_PG_Wireless Coverage,0,4,1,0,1,2,1,1,0,0
+478,1-3FAKJRH,Drop Fiber Damage,0,2,1,0,1,2,1,1,0,2
+479,1-3FA4ZV3,TM_CPE_PG Faulty,0,3,1,1,1,2,1,3,3,0
+480,1-3FAI7T7,Cabinet/SDF Jumper Faulty,0,1,1,0,0,2,0,2,0,0
+481,1-3FAHDMV,ONU_Faulty,0,1,1,0,1,3,1,1,0,0
+482,1-3FAGOUN,Drop Fiber Damage,0,1,1,0,1,2,1,3,0,0
+483,1-3FA4BTX,Cabinet/SDF Jumper Faulty,1,2,1,0,1,3,1,0,0,0
+484,1-3FA5KQS,Cabinet/SDF Jumper Faulty,0,1,2,0,1,4,1,3,0,0
+485,1-3FA5KHT,VDSL_Modem Power Adaptor,1,2,1,0,1,2,1,2,0,1
+486,1-3FA0Z5L,FDP_Damage,0,4,1,0,1,2,1,1,0,1
+487,1-3FA3RY1,Customer_IW Internal Fiber,0,4,1,0,1,2,1,1,0,0
+488,1-3FA4BOV,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+489,1-3FA38MZ,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+490,1-3FA2NO5,Customer Defer Appointment,0,1,1,0,0,2,0,2,0,0
+491,1-3FA2XL1,VDSL_Modem Power Adaptor,0,1,1,0,1,3,1,1,0,0
+492,1-3F9YIQV,FOC_Tie cable problem,0,1,1,0,1,2,1,3,0,0
+493,1-3F9KN45,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+494,1-3F9S9RQ,Cabinet/SDF Jumper Faulty,0,1,2,0,1,4,1,3,0,0
+495,1-3F9F8NK,FDP_FASC Connector Faulty,1,2,1,0,1,2,1,2,0,1
+496,1-3F9LC12,ONU_Faulty,0,4,1,0,1,2,1,1,0,1
+497,1-3F9I2CD,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+498,1-3F9EIJO,FDP_FASC Connector Faulty,0,2,1,0,1,2,1,1,0,2
+499,1-3F9FWWX,VDSL_Modem Power Adaptor,0,3,1,1,1,2,1,3,3,0
+500,1-3F9GOR8,Cabinet/SDF Jumper Faulty,0,1,1,0,0,2,0,2,0,0
+501,1-3F9E77Z,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+502,1-3F8WPA6,EQMT_GE port faulty,0,1,1,0,1,2,1,3,0,0
+503,1-3F93HTG,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+504,1-3F95UV1,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+505,1-3F8WP40,Cabinet/SDF Jumper Faulty,1,2,1,0,1,2,1,2,0,1
+506,1-3F90PDY,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+507,1-3F8UN23,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,0
+508,1-3F8QDGW,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+509,1-3F90UMR,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+510,1-3F8XBSI,TM_CPE_PG_Wireless Coverage,0,1,1,0,0,2,0,2,0,0
+511,1-3F8ZEJY,MSAN config.problem,0,1,1,0,1,3,1,1,0,0
+512,1-3F8H17Y,Customer_IW Copper,0,1,1,0,1,2,1,3,0,0
+513,1-3F8QD4M,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+514,1-3F8KU7A,Other_Fault,0,1,2,0,1,4,1,3,0,0
+515,1-15RFHAR,Customer_Internal Wiring,1,2,1,0,1,2,1,2,0,1
+516,1-15REAP0,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+517,1-15RIKUC,TM_CPE_DectPhone Faulty,0,4,1,0,1,2,1,1,0,0
+518,1-15RG17T,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+519,1-15RGRYM,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+520,1-15RD1RH,EQMT_GE port faulty,0,1,1,0,0,2,0,2,0,0
+521,1-15RA84U,TM_CPE_PG Faulty,0,1,1,0,1,3,1,1,0,0
+522,1-15R9G6B,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+523,1-15R7MUT,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+524,1-15R7I87,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+525,1-15R1IZZ,Customer_Internal Wiring,1,2,1,0,1,2,1,2,0,1
+526,1-15QZ4O1,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+527,1-15QYT15,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+528,1-15QR3QN,TM_CPE_Cable RJ45 Faulty,0,2,1,0,1,2,1,1,0,2
+529,1-15QR95F,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+530,1-15QNKEH,TM_CPE_DectPhone Faulty,0,1,1,0,0,2,0,2,0,0
+531,1-15QOFGI,VDSL_Modem Power Adaptor,0,1,1,0,1,3,1,1,0,0
+532,1-15QME6H,TM_CPE_PG Faulty,0,1,1,0,1,2,1,3,0,0
+533,1-15QK46S,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+534,1-15QFT6J,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+535,1-15QE8QV,EQMT_MSAN VDSL2 card faulty,1,2,1,0,1,2,1,2,0,1
+536,1-15QDIWG,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+537,1-15Q5C81,FDP_FASC Connector Faulty,0,4,1,0,1,2,1,1,0,0
+538,1-15Q3E4Y,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+539,1-15Q4IMP,Cust_TV set Issue/Faulty,0,3,1,1,1,2,1,3,3,0
+540,1-15Q37FC,TM_CPE_PG Config Problem,0,1,1,0,0,2,0,2,0,0
+541,1-15Q2T3E,TM_CPE_STB Faulty,0,1,1,0,1,3,1,1,0,0
+542,1-15PWSC4,EQMT_MSAN VDSL2 card faulty,0,1,1,0,1,2,1,3,0,0
+543,1-15PUOOM,User_Account,1,2,1,0,1,3,1,0,0,0
+544,1-15PUCW7,Cust_TV set Issue/Faulty,0,1,2,0,1,4,1,3,0,0
+545,1-15PUEKC,EQMT_MSAN VDSL2 card faulty,1,2,1,0,1,2,1,2,0,1
+546,1-15PQM6O,TM_FTB FASC Connector Faulty,0,4,1,0,1,2,1,1,0,1
+547,1-15PQ44C,FDP_FASC Connector Faulty,0,4,1,0,1,2,1,1,0,0
+548,1-15PQ0NC,Customer_Cancel TT,0,2,1,0,1,2,1,1,0,2
+549,1-15PJCP4,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+550,1-15PJNK0,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+551,1-15P07QF,Customer Defer Appointment,0,1,1,0,1,3,1,1,0,0
+552,1-15OT3E7,EQMT_MSAN VDSL2 card faulty,0,1,1,0,1,2,1,3,0,0
+553,1-15OV0R3,EQMT_MSAN configuration lost,1,2,1,0,1,3,1,0,0,0
+554,1-15OTTHL,Customer Defer Appointment,0,1,2,0,1,4,1,3,0,0
+555,1-15OVVY8,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+556,1-15OPUWX,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+557,1-15OQGOH,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+558,1-15OKOUR,Customer Defer Appointment,0,2,1,0,1,2,1,1,0,2
+559,1-15O2BIR,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+560,1-15O13T3,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+561,1-15NXTWD,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+562,1-15NNG07,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+563,1-15NOT4P,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+564,1-15NT4F9,TM_CPE_IW_RJ11 Faulty,0,1,2,0,1,4,1,3,0,0
+565,1-15N811G,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+566,1-15N82Y3,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,1
+567,1-15N8K7O,Customer_Internal Wiring,0,4,1,0,1,2,1,1,0,0
+568,1-15N8K4P,TM_CPE_STB Faulty,0,2,1,0,1,2,1,1,0,2
+569,1-15N3W0K,Cabinet/SDF Jumper Faulty,0,3,1,1,1,2,1,3,3,0
+570,1-15N2DNW,TM_FTB FASC Connector Faulty,0,1,1,0,0,2,0,2,0,0
+571,1-15N0ULV,TM_CPE_PG Faulty,0,1,1,0,1,3,1,1,0,0
+572,1-15MTECM,TM_CPE_PG Config Problem,0,1,1,0,1,2,1,3,0,0
+573,1-15N155D,EQMT_GE port faulty,1,2,1,0,1,3,1,0,0,0
+574,1-15MYMWO,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+575,1-4O2OB29,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+576,1-4O2RJHY,Customer_Cancel TT,0,4,1,0,1,2,1,1,0,1
+577,1-4O2GR4J,Drop Fiber Damage,0,4,1,0,1,2,1,1,0,0
+578,1-4O24W6P,VDSL_Modem Power Adaptor,0,2,1,0,1,2,1,1,0,2
+579,1-4O2G2IT,Drop Fiber Core Break,0,3,1,1,1,2,1,3,3,0
+580,1-4O1SEF8,FDP_FASC Connector Faulty,0,1,1,0,0,2,0,2,0,0
+581,1-4O1DESI,MSAN_VDSL_Port_Inactive,0,1,1,0,1,3,1,1,0,0
+582,1-4O15CM0,TM_CPE_PG Hang,0,1,1,0,1,2,1,3,0,0
+583,1-4O18NMX,Cabinet/SDF Jumper Faulty,1,2,1,0,1,3,1,0,0,0
+584,1-4O173DX,TM_FTB Drop Fiber Core Break,0,1,2,0,1,4,1,3,0,0
+585,1-4O15KFI,VDSL_Modem Power Adaptor,1,2,1,0,1,2,1,2,0,1
+586,1-4O0ZZV5,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+587,1-4O15VFA,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+588,1-4O0MU4J,TM_CPE_PG Faulty,0,2,1,0,1,2,1,1,0,2
+589,1-4O0F4C2,Drop Fiber Damage,0,3,1,1,1,2,1,3,3,0
+590,1-4O01OJG,Customer_IW Copper,0,1,1,0,0,2,0,2,0,0
+591,1-4O02GDM,FDP_FASC Connector Faulty,0,1,1,0,1,3,1,1,0,0
+592,1-4NZW593,TM_CPE_PG Hang,0,1,1,0,1,2,1,3,0,0
+593,1-4NZT5UK,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+594,1-4NZPOKZ,EQMT_GE port faulty,0,1,2,0,1,4,1,3,0,0
+595,1-4NZGP57,EQMT_Control card faulty,1,2,1,0,1,2,1,2,0,1
+596,1-4NZEAXT,ONU_Power Adaptor,0,4,1,0,1,2,1,1,0,1
+597,1-46ER512,Customer_IW Copper,0,4,1,0,1,2,1,1,0,0
+598,1-46ER6K0,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+599,1-46EHRW2,TM_CPE_DectPhone Faulty,0,3,1,1,1,2,1,3,3,0
+600,1-46EG2VO,Drop Fiber Damage,0,1,1,0,0,2,0,2,0,0
+601,1-46DZ5HM,Drop Fiber Damage,0,1,1,0,1,3,1,1,0,0
+602,1-46DVCL5,TM_IW FWS,0,1,1,0,1,2,1,3,0,0
+603,1-46DH5FD,TM_CPE_PG Hang,1,2,1,0,1,3,1,0,0,0
+604,1-46DI9H1,VDSL_Modem Power Adaptor,0,1,2,0,1,4,1,3,0,0
+605,1-46D8A0P,ONU_Power Adaptor,1,2,1,0,1,2,1,2,0,1
+606,1-46CJWTB,Customer Defer Appointment,0,4,1,0,1,2,1,1,0,1
+607,1-46CMDLE,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+608,1-46CHP6D,TM_CPE_STB Config Problem,0,2,1,0,1,2,1,1,0,2
+609,1-46CI5L5,FDP_FASC Connector Faulty,0,3,1,1,1,2,1,3,3,0
+610,1-46CHP36,Known_NTT Fault,0,1,1,0,0,2,0,2,0,0
+611,1-46CDAMA,Cabinet/SDF Jumper Faulty,0,1,1,0,1,3,1,1,0,0
+612,1-46CH7YR,TM_CPE_PG Hang,0,1,1,0,1,2,1,3,0,0
+613,1-46CHBMY,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+614,1-46BZHA4,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+615,1-46CGM48,Other_Fault,1,2,1,0,1,2,1,2,0,1
+616,1-46BMBHG,TM_CPE_PG_Wireless Coverage,0,4,1,0,1,2,1,1,0,1
+617,1-46CFTML,Known_NTT Fault,0,4,1,0,1,2,1,1,0,0
+618,1-46BIVU2,VDSL_Modem Power Adaptor,0,2,1,0,1,2,1,1,0,2
+619,1-46CCNE9,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+620,1-46CAPQK,EQMT_VLAN problem,0,1,1,0,0,2,0,2,0,0
+621,1-46C3B4C,Drop Fiber Damage,0,1,1,0,1,3,1,1,0,0
+622,1-46BWD73,TM_IW Fiber Patch Cord,0,1,1,0,1,2,1,3,0,0
+623,1-46BOY4U,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+624,1-46BHBIH,ONU_Power Adaptor,0,1,2,0,1,4,1,3,0,0
+625,1-46AW1Y3,TM_CPE_PG_Wireless Coverage,1,2,1,0,1,2,1,2,0,1
+626,1-46AMJJD,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,1
+627,1-46AJZ1P,ONU_Faulty,0,4,1,0,1,2,1,1,0,0
+628,1-46AA9X4,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+629,1-46A4N6B,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+630,1-46A5PEF,Customer_Cancel TT,0,1,1,0,0,2,0,2,0,0
+631,1-469T6GW,Drop Fiber Damage,0,1,1,0,1,3,1,1,0,0
+632,1-469T4HK,TM_CPE_PG Hang,0,1,1,0,1,2,1,3,0,0
+633,1-469CLAR,ONU_Power Adaptor,1,2,1,0,1,3,1,0,0,0
+634,1-469HAH3,Cabinet/SDF Jumper Faulty,0,1,2,0,1,4,1,3,0,0
+635,1-469KZ1G,Dect_Phone_Faulty,1,2,1,0,1,2,1,2,0,1
+636,1-469HWHD,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,1
+637,1-4690MIS,ONU_Power Adaptor,0,4,1,0,1,2,1,1,0,0
+638,1-4696PUY,ONU_Faulty,0,2,1,0,1,2,1,1,0,2
+639,1-468YUBB,VDSL_Modem Power Adaptor,0,3,1,1,1,2,1,3,3,0
+640,1-468W2Q6,EQMT_MSAN POTS card faulty,0,1,1,0,0,2,0,2,0,0
+641,1-468SHP6,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+642,1-468LJPW,NOVA_Re-Fire,0,1,1,0,1,2,1,3,0,0
+643,1-468O1LG,FDP_FASC Connector Faulty,1,2,1,0,1,3,1,0,0,0
+644,1-468JXVI,TM_CPE_PG Hang,0,1,2,0,1,4,1,3,0,0
+645,1-467D9MO,TM_CPE_DectPhone Faulty,1,2,1,0,1,2,1,2,0,1
+646,1-466X09W,Customer_Internal Wiring,0,4,1,0,1,2,1,1,0,1
+647,1-466NXUP,Cust_PC Issue/Faulty,0,4,1,0,1,2,1,1,0,0
+648,1-466IELX,ONU_Hang,0,2,1,0,1,2,1,1,0,2
+649,1-466JVJD,ONU_Power Adaptor,0,3,1,1,1,2,1,3,3,0
+650,1-466N3HE,VDSL Modem Faulty,0,1,1,0,0,2,0,2,0,0
+651,1-466BSBJ,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+652,1-466ALWB,TM_CPE_PG_Power adaptor prob,0,1,1,0,1,2,1,3,0,0
+653,1-466H2GB,EQMT_VLAN problem,1,2,1,0,1,3,1,0,0,0
+654,1-4667VXD,ONU_Power Adaptor,0,1,2,0,1,4,1,3,0,0
+655,1-466395K,VDSL_Modem Power Adaptor,1,2,1,0,1,2,1,2,0,1
+656,1-465OV5S,ONU_Power Adaptor,0,4,1,0,1,2,1,1,0,1
+657,1-465KPQ0,Other_Fault,0,4,1,0,1,2,1,1,0,0
+658,1-465EB9L,ONU_Faulty,0,2,1,0,1,2,1,1,0,2
+659,1-465DHGY,Other_Fault,0,3,1,1,1,2,1,3,3,0
+660,1-464ZOMX,TM_CPE_PG Config Problem,0,1,1,0,0,2,0,2,0,0
+661,1-464NAF7,ONU_Missing Config,0,1,1,0,1,3,1,1,0,0
+662,1-WOKNJD,Other_Fault,0,1,1,0,1,2,1,3,0,0
+663,1-WOKP42,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+664,1-WOIBVO,Other_Fault,0,1,2,0,1,4,1,3,0,0
+665,1-WOJC2O,TM_CPE_DectPhone Faulty,1,2,1,0,1,2,1,2,0,1
+666,1-WOJ4TM,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+667,1-WOCF2M,Other_Fault,0,4,1,0,1,2,1,1,0,0
+668,1-WO9AKE,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+669,1-WO61OI,TM_IW Fiber Patch Cord,0,3,1,1,1,2,1,3,3,0
+670,1-WO75SY,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+671,1-WO7IMT,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+672,1-WO5523,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+673,1-WO38HZ,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+674,1-WO3BH0,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+675,1-WO289T,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+676,1-WNYFIN,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+677,1-WNYBO8,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+678,1-WNWIE6,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+679,1-WNWW49,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+680,1-WNVNLS,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+681,1-WNT0Z1,Other_Fault,0,1,1,0,1,3,1,1,0,0
+682,1-WNVSXL,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+683,1-WNU50X,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+684,1-WNVOVT,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+685,1-WNVN62,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+686,1-WNU0F0,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+687,1-WNU4V4,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+688,1-WNTEAV,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+689,1-WNTE7V,TM_CPE_PG Config Problem,0,3,1,1,1,2,1,3,3,0
+690,1-WNRFID,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+691,1-WNPXM5,TM_FTB FASC Connector Faulty,0,1,1,0,1,3,1,1,0,0
+692,1-WNM5P4,TM_FTB FASC Connector Faulty,0,1,1,0,1,2,1,3,0,0
+693,1-WNJMQH,TM_CPE_DectPhone Faulty,1,2,1,0,1,3,1,0,0,0
+694,1-WNJMK4,Cust_TV set Issue/Faulty,0,1,2,0,1,4,1,3,0,0
+695,1-WNJE56,TM_CPE_IW_RJ11 Faulty,1,2,1,0,1,2,1,2,0,1
+696,1-WN1LLT,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+697,1-WN37BI,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+698,1-WN1F12,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+699,1-WMZHNF,VDSL Modem Faulty,0,3,1,1,1,2,1,3,3,0
+700,1-WN25F5,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+701,1-WMZHGO,TM_CPE_PG Faulty,0,1,1,0,1,3,1,1,0,0
+702,1-WN0UFT,Cabinet/SDF Jumper Faulty,0,1,1,0,1,2,1,3,0,0
+703,1-WN095G,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+704,1-WN0M9E,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+705,1-WMZPNB,Customer_Cancel TT,1,2,1,0,1,2,1,2,0,1
+706,1-WMWP5N,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+707,1-WMY608,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+708,1-WMXJQY,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+709,1-WMWC70,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+710,1-WMWGMR,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+711,1-WMWBZU,TM_CPE_PG Faulty,0,1,1,0,1,3,1,1,0,0
+712,1-WMTKH5,Other_Fault,0,1,1,0,1,2,1,3,0,0
+713,1-WMV26Z,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+714,1-WMWPLJ,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+715,1-WMWOMT,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+716,1-WMVRIU,TM_FTB FASC Connector Faulty,0,4,1,0,1,2,1,1,0,1
+717,1-WMUDCS,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+718,1-WMSTHQ,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+719,1-WMT2QD,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+720,1-WMSTUS,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+721,1-WMRTXG,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+722,1-WMQMU8,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+723,1-WMO01R,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+724,1-WMQM7J,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+725,1-WMO956,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+726,1-WMKKIA,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,1
+727,1-WMMKJ0,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+728,1-WMHXC4,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+729,1-WMGDN2,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+730,1-WMBRW4,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+731,1-WMBV6B,Drop Fiber Damage,0,1,1,0,1,3,1,1,0,0
+732,1-WMC8LQ,Other_Fault,0,1,1,0,1,2,1,3,0,0
+733,1-WM9BWT,TM_CPE_DectPhone Faulty,1,2,1,0,1,3,1,0,0,0
+734,1-WM53BC,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+735,1-2T8HBFJ,TM_CPE_DectPhone Faulty,1,2,1,0,1,2,1,2,0,1
+736,1-2T7VJ3P,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+737,1-2T477NH,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+738,1-2T6KH9C,VDSL Modem Faulty,0,2,1,0,1,2,1,1,0,2
+739,1-2T4UTWE,VDSL_Modem Power Adaptor,0,3,1,1,1,2,1,3,3,0
+740,1-2T4DG2M,Planned Maintenance Work (PMW),0,1,1,0,0,2,0,2,0,0
+741,1-2T4KOEF,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+742,1-2T489M6,Drop Fiber Damage,0,1,1,0,1,2,1,3,0,0
+743,1-2T47WUE,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+744,1-2T489F9,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+745,1-2T49SK6,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+746,1-2T464LD,Other_Fault,0,4,1,0,1,2,1,1,0,1
+747,1-2T3S6Y2,Customer_Riser Faulty,0,4,1,0,1,2,1,1,0,0
+748,1-2T40KSX,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+749,1-2T3P5IJ,TM_CPE_IW_RJ11 Faulty,0,3,1,1,1,2,1,3,3,0
+750,1-2T3XG3A,VDSL Modem Faulty,0,1,1,0,0,2,0,2,0,0
+751,1-2T3PR4Q,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+752,1-2T3EIDE,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+753,1-2T2SUZZ,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+754,1-2T2QXCU,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+755,1-2T2LO4A,Cust_PhoneWallSocketFaulty,1,2,1,0,1,2,1,2,0,1
+756,1-2T1TP5F,EQMT_MSAN POTS card faulty,0,4,1,0,1,2,1,1,0,1
+757,1-2T1SUD3,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+758,1-2T1ECJF,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+759,1-2T1D0AX,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+760,1-2T0V66T,Cabinet/SDF Jumper Faulty,0,1,1,0,0,2,0,2,0,0
+761,1-2T0QUR7,AccessNetwork_Failure,0,1,1,0,1,3,1,1,0,0
+762,1-2T18ZD3,FDP_FASC Connector Faulty,0,1,1,0,1,2,1,3,0,0
+763,1-2T1667X,VDSL_Modem Power Adaptor,1,2,1,0,1,3,1,0,0,0
+764,1-2T0IETG,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+765,1-2T0VN86,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+766,1-2T0O6K2,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+767,1-2T0KXMU,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,0
+768,1-2T0CWGA,TM_CPE_PG Config Problem,0,2,1,0,1,2,1,1,0,2
+769,1-2T06199,FDP_FASC Connector Faulty,0,3,1,1,1,2,1,3,3,0
+770,1-2T035MF,TM_CPE_PG Hang,0,1,1,0,0,2,0,2,0,0
+771,1-2T0582X,Customer_IW Copper,0,1,1,0,1,3,1,1,0,0
+772,1-2T0324B,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+773,1-2T01XQU,Customer_Cancel TT,1,2,1,0,1,3,1,0,0,0
+774,1-2SZNL6L,VDSL Modem Faulty,0,1,2,0,1,4,1,3,0,0
+775,1-2SZREWU,Drop Fiber Damage,1,2,1,0,1,2,1,2,0,1
+776,1-2SY0BYH,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+777,1-2SZQ0RE,Drop Fiber Damage,0,4,1,0,1,2,1,1,0,0
+778,1-2SXEB6H,VDSL_Modem Power Adaptor,0,2,1,0,1,2,1,1,0,2
+779,1-2SXNL3N,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+780,1-2SVT1MN,FDP_FASC Connector Faulty,0,1,1,0,0,2,0,2,0,0
+781,1-2SXCS5V,Drop Fiber Damage,0,1,1,0,1,3,1,1,0,0
+782,1-2SWPY11,Clear While Localising,0,1,1,0,1,2,1,3,0,0
+783,1-2SX610T,EQMT_MSAN POTS card faulty,1,2,1,0,1,3,1,0,0,0
+784,1-2SWPW8J,Drop Fiber Damage,0,1,2,0,1,4,1,3,0,0
+785,1-2SX6GJH,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+786,1-2SWUSYP,VDSL Modem Faulty,0,4,1,0,1,2,1,1,0,1
+787,1-2SWKP1X,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+788,1-2SWF4HO,PG_Faulty,0,2,1,0,1,2,1,1,0,2
+789,1-2SWLOCS,Drop Fiber Damage,0,3,1,1,1,2,1,3,3,0
+790,1-2SWC0ZH,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+791,1-2SW6C89,TM_CPE_STB Config Problem,0,1,1,0,1,3,1,1,0,0
+792,1-2SW6CGW,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+793,1-2SW1M6F,TM_CPE_IW_RJ11 Faulty,1,2,1,0,1,3,1,0,0,0
+794,1-2SVO6VR,TM_FTB Drop Fiber Core Break,0,1,2,0,1,4,1,3,0,0
+795,1-2SVUEA1,VDSL Modem Faulty,1,2,1,0,1,2,1,2,0,1
+796,1-2SVGK1K,TM_CPE_PG Hang,0,4,1,0,1,2,1,1,0,1
+797,1-2SVJBF5,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,0
+798,1-2SVBQZX,VDSL Modem Faulty,0,2,1,0,1,2,1,1,0,2
+799,1-2SV3MUP,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+800,1-28E7H3R,Customer_Internal Wiring,0,1,1,0,0,2,0,2,0,0
+801,1-28E2TIJ,Cabinet/SDF Jumper Faulty,0,1,1,0,1,3,1,1,0,0
+802,1-28D938N,Customer Defer Appointment,0,1,1,0,1,2,1,3,0,0
+803,1-28DVKUB,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+804,1-28DJMBX,Drop Fiber Damage,0,1,2,0,1,4,1,3,0,0
+805,1-28D5I9M,ONU_Power Adaptor,1,2,1,0,1,2,1,2,0,1
+806,1-28D4EWG,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+807,1-28D4EUS,EQMT_VLAN problem,0,4,1,0,1,2,1,1,0,0
+808,1-28CYWV7,Customer_Internal Wiring,0,2,1,0,1,2,1,1,0,2
+809,1-28D4ER6,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+810,1-28CV6RA,Customer_IW Internal Fiber,0,1,1,0,0,2,0,2,0,0
+811,1-28CWFNO,EQMT_MSAN configuration lost,0,1,1,0,1,3,1,1,0,0
+812,1-28CSTGL,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+813,1-28CV0JB,Cabinet/SDF Jumper Faulty,1,2,1,0,1,3,1,0,0,0
+814,1-28CMPJ6,Customer Defer Appointment,0,1,2,0,1,4,1,3,0,0
+815,1-28CV07Z,Customer Defer Appointment,1,2,1,0,1,2,1,2,0,1
+816,1-28CISP2,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,1
+817,1-28C6FK1,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+818,1-28CFESU,Customer Defer Appointment,0,2,1,0,1,2,1,1,0,2
+819,1-28CE579,Cabinet/SDF Jumper Faulty,0,3,1,1,1,2,1,3,3,0
+820,1-28CCO2E,VDSL Modem Config Problem,0,1,1,0,0,2,0,2,0,0
+821,1-28C9Y7D,Customer_Not Reachable,0,1,1,0,1,3,1,1,0,0
+822,1-28C51D4,MSAN patch cord at cabinet,0,1,1,0,1,2,1,3,0,0
+823,1-28C89E3,VDSL_Modem Power Adaptor,1,2,1,0,1,3,1,0,0,0
+824,1-28C77FN,Other_Fault,0,1,2,0,1,4,1,3,0,0
+825,1-28C8T07,Cabinet/SDF Jumper Faulty,1,2,1,0,1,2,1,2,0,1
+826,1-28C5BDX,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,1
+827,1-28C5JTK,VDSL_Modem Power Adaptor,0,4,1,0,1,2,1,1,0,0
+828,1-28C1WQX,Other_Fault,0,2,1,0,1,2,1,1,0,2
+829,1-28B2F2L,EQMT_GE port faulty,0,3,1,1,1,2,1,3,3,0
+830,1-28BUWLV,Customer_Not Reachable,0,1,1,0,0,2,0,2,0,0
+831,1-28BP0UC,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+832,1-28BR57R,EQMT_GE port faulty,0,1,1,0,1,2,1,3,0,0
+833,1-28AW2T4,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+834,1-28B1H9P,Other_Fault,0,1,2,0,1,4,1,3,0,0
+835,1-28AYTH7,TM_FTB FASC Connector Faulty,1,2,1,0,1,2,1,2,0,1
+836,1-28AZ446,TM_CPE_PG Config Problem,0,4,1,0,1,2,1,1,0,1
+837,1-28AX1NB,Drop Fiber Damage,0,4,1,0,1,2,1,1,0,0
+838,1-28AVZ7Z,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+839,1-28AIA5J,Customer_Not Reachable,0,3,1,1,1,2,1,3,3,0
+840,1-28AGN8R,EQMT_GE port faulty,0,1,1,0,0,2,0,2,0,0
+841,1-28AAGCM,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+842,1-28AGHAQ,TM_CPE_STB Faulty,0,1,1,0,1,2,1,3,0,0
+843,1-289MP29,VDSL Modem Faulty,1,2,1,0,1,3,1,0,0,0
+844,1-289NOLJ,TM_CPE_IW_RJ11 Faulty,0,1,2,0,1,4,1,3,0,0
+845,1-289ACBY,Clear While Localising,1,2,1,0,1,2,1,2,0,1
+846,1-289ENNV,AccessNetwork_Failure,0,4,1,0,1,2,1,1,0,1
+847,1-289HI7F,FOC_D/S Cable Damage,0,4,1,0,1,2,1,1,0,0
+848,1-289MALL,FDP_FASC Connector Faulty,0,2,1,0,1,2,1,1,0,2
+849,1-289NEBB,Cabinet/SDF Jumper Faulty,0,3,1,1,1,2,1,3,3,0
+850,1-289JXF0,EQMT_GE port faulty,0,1,1,0,0,2,0,2,0,0
+851,1-2897UY1,VDSL Modem Faulty,0,1,1,0,1,3,1,1,0,0
+852,1-289ENH0,VDSL_Modem Power Adaptor,0,1,1,0,1,2,1,3,0,0
+853,1-WM3GSM,Other_Fault,1,2,1,0,1,3,1,0,0,0
+854,1-WM6OP6,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+855,1-WM51Y6,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+856,1-WM3O0W,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+857,1-WM24DC,Cust_PC Issue/Faulty,0,4,1,0,1,2,1,1,0,0
+858,1-WM0I9E,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+859,1-WLYAFL,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+860,1-WLX14M,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+861,1-WLT4SG,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+862,1-WLVMV6,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+863,1-WLU9JE,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+864,1-WLUBML,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+865,1-WLQ4MJ,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+866,1-WLOXD2,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+867,1-WLOX4V,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+868,1-WLNJ20,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+869,1-WLN4GS,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+870,1-WLMV7W,TM_FTB FASC Connector Faulty,0,1,1,0,0,2,0,2,0,0
+871,1-WLLBOG,TM_CPE_IW_RJ11 Faulty,0,1,1,0,1,3,1,1,0,0
+872,1-WLJRZY,TM_CPE_IW_RJ11 Faulty,0,1,1,0,1,2,1,3,0,0
+873,1-WLE2WY,ONU_Faulty,1,2,1,0,1,3,1,0,0,0
+874,1-WLG71B,EQMT_GE port faulty,0,1,2,0,1,4,1,3,0,0
+875,1-WLA72H,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+876,1-WL5OKE,Other_Fault,0,4,1,0,1,2,1,1,0,1
+877,1-WL3U7M,TM_CPE_STB Faulty,0,4,1,0,1,2,1,1,0,0
+878,1-WL2JE5,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+879,1-WL1NJ0,Cust_PhoneWallSocketFaulty,0,3,1,1,1,2,1,3,3,0
+880,1-WKK4C5,Customer Defer Appointment,0,1,1,0,0,2,0,2,0,0
+881,1-WKL3MC,Other_Fault,0,1,1,0,1,3,1,1,0,0
+882,1-WKL18Z,VDSL Modem Faulty,0,1,1,0,1,2,1,3,0,0
+883,1-WKC4ZD,Other_Fault,1,2,1,0,1,3,1,0,0,0
+884,1-WKD3AF,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+885,1-WKFPG2,Other_Fault,1,2,1,0,1,2,1,2,0,1
+886,1-WKFPD4,Customer Defer Appointment,0,4,1,0,1,2,1,1,0,1
+887,1-WKG4HA,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+888,1-WKHMD2,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+889,1-WKHE2U,TM_CPE_IW_RJ11 Faulty,0,3,1,1,1,2,1,3,3,0
+890,1-WKFGQJ,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+891,1-WKFJN4,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+892,1-WKH4OH,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+893,1-WKFGNA,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+894,1-WKC4BB,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+895,1-WKA3A8,TM_FTB FASC Connector Faulty,1,2,1,0,1,2,1,2,0,1
+896,1-WKC42L,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+897,1-WKBXDB,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,0
+898,1-WK95B8,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+899,1-WK9SCK,FOC_D/S Cable Damage,0,3,1,1,1,2,1,3,3,0
+900,1-WKA8I4,Cabinet/SDF Jumper Faulty,0,1,1,0,0,2,0,2,0,0
+901,1-WKA2QP,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+902,1-WK7SFJ,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+903,1-WK8HO1,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+904,1-WK7SB2,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+905,1-WK7S5J,TM_FTB FASC Connector Faulty,1,2,1,0,1,2,1,2,0,1
+906,1-WK3AKK,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,1
+907,1-WK5WJM,Customer_Internal Wiring,0,4,1,0,1,2,1,1,0,0
+908,1-WK7168,EQMT_GE port faulty,0,2,1,0,1,2,1,1,0,2
+909,1-WK58KV,EQMT_GE port faulty,0,3,1,1,1,2,1,3,3,0
+910,1-WK58DK,Clear While Localising,0,1,1,0,0,2,0,2,0,0
+911,1-WK3WPS,EQMT_GE port faulty,0,1,1,0,1,3,1,1,0,0
+912,1-WK392E,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+913,1-WK2L6B,EQMT_GE port faulty,1,2,1,0,1,3,1,0,0,0
+914,1-WK1728,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+915,1-WK3FF1,User_Account,1,2,1,0,1,2,1,2,0,1
+916,1-WK23FS,FOC_Tie cable problem,0,4,1,0,1,2,1,1,0,1
+917,1-WK38R9,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+918,1-WK0S0H,Cust_PC Issue/Faulty,0,2,1,0,1,2,1,1,0,2
+919,1-WJZ4UO,TM_CPE_PG Faulty,0,3,1,1,1,2,1,3,3,0
+920,1-WK1515,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+921,1-WJZ4R2,Clear While Localising,0,1,1,0,1,3,1,1,0,0
+922,1-WK011R,FDP_FASC Connector Faulty,0,1,1,0,1,2,1,3,0,0
+923,1-WJYNBA,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+924,1-WJZ8DH,Premise Closed,0,1,2,0,1,4,1,3,0,0
+925,1-WJYB37,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+926,1-WJUZOI,Customer_Internal Wiring,0,4,1,0,1,2,1,1,0,1
+927,1-WJUNP6,Other_Fault,0,4,1,0,1,2,1,1,0,0
+928,1-WJP28C,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+929,1-WJNFF9,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+930,1-WJKXJ4,VDSL Modem Faulty,0,1,1,0,0,2,0,2,0,0
+931,1-WJKYI4,ONU_Missing Config,0,1,1,0,1,3,1,1,0,0
+932,1-WJKYE6,Premise Closed,0,1,1,0,1,2,1,3,0,0
+933,1-WJKQR4,Other_Fault,1,2,1,0,1,3,1,0,0,0
+934,1-WJH84A,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+935,1-WJGBMN,EQMT_GE port faulty,1,2,1,0,1,2,1,2,0,1
+936,1-WJHD2C,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+937,1-WJHC93,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,0
+938,1-R3ZQG8,Cabinet/SDF Jumper Faulty,0,2,1,0,1,2,1,1,0,2
+939,1-R3MXVY,EQMT_GE port faulty,0,3,1,1,1,2,1,3,3,0
+940,1-R3L890,Customer_Not Reachable,0,1,1,0,0,2,0,2,0,0
+941,1-R3L83U,EQMT_GE port faulty,0,1,1,0,1,3,1,1,0,0
+942,1-R3KPMJ,TM_CPE_PG Faulty,0,1,1,0,1,2,1,3,0,0
+943,1-R3K9I9,Customer_Behaviour,1,2,1,0,1,3,1,0,0,0
+944,1-R3EY9S,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+945,1-R3C4O7,TM_CPE_IW_RJ11 Faulty,1,2,1,0,1,2,1,2,0,1
+946,1-R3C4KT,Clear While Localising,0,4,1,0,1,2,1,1,0,1
+947,1-R3E9YT,EQMT_GE port faulty,0,4,1,0,1,2,1,1,0,0
+948,1-R3E6ZA,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+949,1-R3ATUP,Other_Fault,0,3,1,1,1,2,1,3,3,0
+950,1-R369NY,TM_CPE_DectPhone Faulty,0,1,1,0,0,2,0,2,0,0
+951,1-R31YJG,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+952,1-R2YDU7,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+953,1-R2UMEI,TM_FTB FASC Connector Faulty,1,2,1,0,1,3,1,0,0,0
+954,1-R2XIUK,Other_Fault,0,1,2,0,1,4,1,3,0,0
+955,1-R2UM5Q,TM_CPE_PG Faulty,1,2,1,0,1,2,1,2,0,1
+956,1-R2PTZK,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+957,1-R2OKHQ,Clear While Localising,0,4,1,0,1,2,1,1,0,0
+958,1-R2MLX4,Clear While Localising,0,2,1,0,1,2,1,1,0,2
+959,1-R2GHIT,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+960,1-R2J94Q,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+961,1-R2EP4M,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+962,1-R2DX82,Customer_Behaviour,0,1,1,0,1,2,1,3,0,0
+963,1-R2BTDW,Other_Fault,1,2,1,0,1,3,1,0,0,0
+964,1-R2D95O,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+965,1-R2CT8X,TM_CPE_DectPhone Faulty,1,2,1,0,1,2,1,2,0,1
+966,1-R2BJU7,Other_Fault,0,4,1,0,1,2,1,1,0,1
+967,1-R2AC33,PG_Faulty,0,4,1,0,1,2,1,1,0,0
+968,1-R27DC5,TM_CPE_DectPhone Faulty,0,2,1,0,1,2,1,1,0,2
+969,1-R2440C,Drop Fiber Damage,0,3,1,1,1,2,1,3,3,0
+970,1-R223IE,TM_CPE_PG Config Problem,0,1,1,0,0,2,0,2,0,0
+971,1-R222KH,Cust_PhoneWallSocketFaulty,0,1,1,0,1,3,1,1,0,0
+972,1-R1ZF76,No Wireless Coverage,0,1,1,0,1,2,1,3,0,0
+973,1-R1ZH0U,TM_CPE_PG Faulty,1,2,1,0,1,3,1,0,0,0
+974,1-R1Z889,Customer_Behaviour,0,1,2,0,1,4,1,3,0,0
+975,1-R1Z6GV,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+976,1-R1WHIP,TM_CPE_STB Hang,0,4,1,0,1,2,1,1,0,1
+977,1-R1WJ7H,TM_CPE_PG Hang,0,4,1,0,1,2,1,1,0,0
+978,1-R1XWC1,Customer_Cancel TT,0,2,1,0,1,2,1,1,0,2
+979,1-R1VTC7,Customer_Behaviour,0,3,1,1,1,2,1,3,3,0
+980,1-R1TC0Z,Customer_Behaviour,0,1,1,0,0,2,0,2,0,0
+981,1-R1SRXF,Other_Fault,0,1,1,0,1,3,1,1,0,0
+982,1-R1TTCH,TM_CPE_STB Hang,0,1,1,0,1,2,1,3,0,0
+983,1-R1QSG0,Clear While Localising,1,2,1,0,1,3,1,0,0,0
+984,1-R1SBIM,TM_CPE_PG Config Problem,0,1,2,0,1,4,1,3,0,0
+985,1-R1S9ZJ,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+986,1-R1NPUS,TM_CPE_PG Faulty,0,4,1,0,1,2,1,1,0,1
+987,1-R1JHUS,FDP_Low Signal,0,4,1,0,1,2,1,1,0,0
+988,1-R16PQX,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+989,1-R16R4U,Other_Fault,0,3,1,1,1,2,1,3,3,0
+990,1-R16PNU,TM_CPE_PG Faulty,0,1,1,0,0,2,0,2,0,0
+991,1-R10G4I,Customer_Behaviour,0,1,1,0,1,3,1,1,0,0
+992,1-3F95O6K,Drop Fiber Damage,0,1,1,0,1,2,1,3,0,0
+993,1-15T47IT,ONU_Faulty,1,2,1,0,1,3,1,0,0,0
+994,1-15VBDA7,Clear While Localising,0,1,2,0,1,4,1,3,0,0
+995,1-WRV0HB,Customer_Behaviour,1,2,1,0,1,2,1,2,0,1
+996,1-WSSXNT,Customer_Behaviour,0,4,1,0,1,2,1,1,0,1
+997,1-WTBMN8,Customer_Behaviour,0,4,1,0,1,2,1,1,0,0
+998,1-WTGU26,Customer_Behaviour,0,2,1,0,1,2,1,1,0,2
+999,1-WTJL9S,Clear While Localising,0,3,1,1,1,2,1,3,3,0
+1000,1-WTM15E,Cabinet/SDF Jumper Faulty,0,1,1,0,0,2,0,2,0,0

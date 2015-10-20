@@ -133,14 +133,19 @@ ctt <- ctt[,c(18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33)]
 
 set.seed(825)
 
+
+ctt <- ctt[,-nearZeroVar(ctt)] 
+names(ctt)
+
+
 #70 30 
 
-inTraining <- createDataPartition(ctt$resolution_code1, p = .7, list = FALSE)
+inTraining <- createDataPartition(ctt$resolution_code_factor, p = .7, list = FALSE)
 training <- ctt[ inTraining,]
 testing  <- ctt[-inTraining,]
 
 #Repeated k-fold Cross Validation 10-fold cross validation number=10 ## 10-fold CV  ## repeated ten times
-fitControl <- trainControl(method="repeatedcv", number=10, repeats=2)
+fitControl <- trainControl(method="repeatedcv", number=10, repeats=1)
 
 # model = train(am ~ ., method = 'rpart', data = mtcars)
 # http://topepo.github.io/caret/modelList.html
@@ -149,14 +154,14 @@ fitControl <- trainControl(method="repeatedcv", number=10, repeats=2)
 #registerDoParallel(3,cores=3)
 #getDoParWorkers()
 
-training$resolution_code1 <- as.factor(training$resolution_code1)
-suppressWarnings(model <- train(training$resolution_code1 ~ .,  data=training, method="gbm", trControl=fitControl , verbose = FALSE ))
+training$resolution_code_factor <- as.factor(training$resolution_code_factor)
+model <- train(as.factor(resolution_code_factor) ~ .,  data=training, method="gbm", trControl=fitControl , verbose = FALSE )
 importance <- varImp(model, scale=TRUE)
 model
 print(importance)
 plot(importance)
 prediction <- predict(model,testing)
-confusionMatrix(prediction,training$resolution_code1)
+confusionMatrix(prediction,training$resolution_code_factor)
 
 
 ```
@@ -174,7 +179,7 @@ suppressWarnings(library(SnowballC))
 suppressWarnings(library(caret))
 suppressWarnings(require(tm))
 
-ctt <- read.csv("ctt2014_small.csv")
+ctt <- read.csv("ctt2014.csv")
 df <- data.frame(ctt$description , stringsAsFactors = FALSE)
 mycorpus <- Corpus(DataframeSource(df))
 tdm <- TermDocumentMatrix(mycorpus, control = list(weight = weightTfIdf  ,
@@ -184,7 +189,6 @@ tdm <- removeSparseTerms(tdm, sparse= 0.8)
 c <- inspect(tdm)
 plot(tdm, corThreshold = 0.2, weighting = TRUE)
 ```
-
 
 
 
