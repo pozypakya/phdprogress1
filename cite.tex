@@ -1,0 +1,303 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Carl Boettiger},
+            pdftitle={An introduction to knitcitations},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{An introduction to knitcitations}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Carl Boettiger}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{27 May 2014}
+
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\section{knitcitations}\label{knitcitations}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Author}: \href{http://www.carlboettiger.info/}{Carl Boettiger}
+\item
+  \textbf{License}: \href{http://opensource.org/licenses/MIT}{MIT}
+\item
+  \href{https://github.com/cboettig/knitcitations}{Package source code
+  on Github}
+\item
+  \href{https://github.com/cboettig/knitcitations/issues}{\textbf{Submit
+  Bugs and feature requests}}
+\end{itemize}
+
+\texttt{knitcitations} is an R package designed to add dynamic citations
+to dynamic documents created with
+\href{https://github.com/yihui/knitr}{Yihui's knitr package}.
+
+\subsection{Installation}\label{installation}
+
+Install the development version directly from Github
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(devtools)}
+\KeywordTok{install_github}\NormalTok{(}\StringTok{"cboettig/knitcitations"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Or install the current release from your CRAN mirror with
+\texttt{install.packages("knitcitations")}.
+
+\subsection{Quick start: rmarkdown (pandoc)
+mode}\label{quick-start-rmarkdown-pandoc-mode}
+
+Start by loading the library. It is usually good to also clear the
+bibliographic environment after loading the library, in case any
+citations are already stored there:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{setwd}\NormalTok{(}\StringTok{"D:/Google Drive/PHD/Progress/phdprogress1"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"knitcitations"}\NormalTok{)}
+\KeywordTok{cleanbib}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Set pandoc as the default format:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{options}\NormalTok{(}\StringTok{"citation_format"} \NormalTok{=}\StringTok{ "pandoc"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+(Note: The old method will eventually be depricated. For documents using
+\texttt{knitcitations\ \textless{}=\ 0.5} it will become necessary to
+set this as \texttt{"compatibility"}).
+
+\subsubsection{Cite by DOI}\label{cite-by-doi}
+
+Cite an article by DOI and the full citation information is gathered
+automatically. By default this now generates a citation in
+pandoc-flavored-markdown format. We use the inline command
+\texttt{citep("10.1890/11-0011.1")} to create this citation
+\citep{Abrams_2012}.
+
+An in-text citation is generated with \texttt{citet}, such as
+\texttt{citet("10.1098/rspb.2013.1372")} creating the citation to
+\citet{Boettiger_2013}.
+
+\subsubsection{Cite by URL}\label{cite-by-url}
+
+Not all the literature we may wish to cite includes DOIs, such as
+\href{http://arxiv.org}{arXiv} preprints, Wikipedia pages, or other
+academic blogs. Even when a DOI is present it is not always trivial to
+locate. With version 0.4-0, \texttt{knitcitations} can produce citations
+given any URL using the
+\href{http://greycite.knowledgeblog.org}{Greycite API}. For instance, we
+can use the call \texttt{citep("http://knowledgeblog.org/greycite")} to
+generate the citation to the Greycite tool \citep{greycite32194}.
+
+\subsubsection{Cite bibtex and bibentry objects
+directly}\label{cite-bibtex-and-bibentry-objects-directly}
+
+We can also use \texttt{bibentry} objects such as R provides for citing
+packages (using R's \texttt{citation()} function):
+\texttt{citep(citation("knitr")} produces
+\citep{Xie_2015, Xie_2015a, Xie_2014}. Note that this package includes
+citations to three objects, and pandoc correctly avoids duplicating the
+author names. In pandoc mode, we can still use traditional
+pandoc-markdown citations like \texttt{@Boettiger\_2013} which will
+render as \citet{Boettiger_2013} without any R code, provided the
+citation is already in the \texttt{.bib} file we name (see below).
+
+\subsubsection{Re-using Keys}\label{re-using-keys}
+
+When the citation is called, a key in the format
+\texttt{FirstAuthorsLastName\_Year} is automatically created for this
+citation, so we can now continue to cite this article without
+remembering the DOI, using the command \texttt{citep("Abrams\_2012")}
+creates the citation \citep{Abrams_2012} without mistaking it for a new
+article.
+
+\subsubsection{Displaying the final
+bibliography}\label{displaying-the-final-bibliography}
+
+At the end of the document, include a chunk containing the command:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{write.bibtex}\NormalTok{(}\DataTypeTok{file=}\StringTok{"references.bib"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Use the chunk options \texttt{echo=FALSE} and \texttt{message=FALSE} to
+hide the chunk command and output.
+
+This creates a Bibtex file with the name given.
+\href{http://johnmacfarlane.net/pandoc}{Pandoc} can then be used to
+compile the markdown into HTML, MS Word, LaTeX, PDF, or many other
+formats, each with the desired journal styling. Pandoc is now integrated
+with \href{http://rstudio.com}{RStudio} through the
+\href{http://rmarkdown.rstudio.com}{rmarkdown} package. Pandoc appends
+these references to the end of the markdown document automatically. In
+this example, we have added a yaml header to our Rmd file which
+indicates the name of the bib file being used, and the optional link to
+a \href{https://github.com/citation-style-language/styles}{CSL}
+stylesheet which formats the output for the ESA journals:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{---}
+\FunctionTok{bibliography:} \StringTok{"references.bib"}
+\FunctionTok{csl:} \StringTok{"ecology.csl"}
+\FunctionTok{output:}
+  \NormalTok{html_document}
+\OtherTok{---}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Example file for RStudio /
+rmarkdown}\label{example-file-for-rstudio-rmarkdown}
+
+This vignette itself is written as an \texttt{.Rmd} file with the
+\texttt{yaml} header discussed above for working with RStudio's
+\texttt{knit} buttons or the rmarkdown R package. You can see the
+\href{https://raw.githubusercontent.com/cboettig/knitcitations/master/vignettes/tutorial.Rmd}{tutorial
+source file here}. Calling \texttt{rmarkdown::render("tutorial.Rmd")}
+from R on the tutorial compiles the output markdown, with references in
+the format of the ESA journals.
+
+\renewcommand\refname{References}
+\bibliography{references.bib}
+
+\end{document}

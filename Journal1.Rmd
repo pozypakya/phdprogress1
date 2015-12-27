@@ -1,15 +1,16 @@
 ---
-title: Text Data Processing Techniques on Trouble Ticket for Enhancing Resolution Knowledge
+title: Draft 2 - Text Data Processing Techniques on Trouble Ticket for Enhancing Resolution
+  Knowledge
 author: "Fauzy bin Che Yayah"
-date: "November 21, 2015"
+date: "December 28, 2015"
+email : "akunyer@gmail.com"
 output:
   pdf_document:
     fig_caption: yes
     fig_crop: no
-    fig_height: 2
+    fig_height: 3
     fig_width: 5
     highlight: monochrome
-    keep_tex: yes
     number_sections: yes
   html_document:
     toc: yes
@@ -18,30 +19,67 @@ output:
 fig.align: center
 ---
 
+
 ```{r , echo=FALSE , message=F, warning=F}
 assign("last.warning", NULL, envir = baseenv())
 suppressWarnings(suppressMessages(library(png)))
 suppressWarnings(suppressMessages(library(grid)))
 suppressWarnings(suppressMessages(library(pander)))
+suppressWarnings(suppressMessages(library(knitcitations)))
+
+#library("knitcitations")
+#cleanbib()
+#options("citation_format" = "pandoc")
+
 ```
 
 
-*Abstract -Trouble ticket system is always includes very rich data, but how to data-mining from is very challenging task.In this paper , we applied the technique of data processing for the ease for the next stage of classification and prediction.On the other hand , we applied the new techniques of data mining by combining with the Bigdata elements for faster and achievable results.We realize that the combination of this techniques will provide luxuriant decision information for any organization and management.It also can become a fulfillment the field of data mining*
+*Abstract -Trouble ticket system always includes very rich data, but how to data-mining from is a very challenging task.In this paper, we applied the new technique of data processing for the ease for the next stage of classification and prediction.In another word, we also improvised the data mining technique by combining with the Bigdata technology for faster and achievable results.We realize that this method will provide luxuriant decision information for any organization or management and become a new fulfillment the field of data mining. The present report contains the results of the recommended techniques on how to process trouble ticket dataset and data discovery within it.*
 
 # Keywords
 
-Data mining; data processing ; hadoop ; tickets data ; unstructured text processing
+Data mining; data processing ; Hadoop ; tickets data ; unstructured ; text processing 
 
 # Introduction
 
-The trouble ticket system for telecommunication industries produced several thousand of records everyday. These records provide rich, accurate and complete for the system diagnostics and enhancing the customer experience by solving the problems. The live records stored inside the database of all levels of servers and replicated into the Enterprise Data Warehouse (EDWH) for data staging and shared among the departments via the credential and permission for different points of usage or use case. The data are coordinated and conserved for at least for five years minimum, which is enough for the analytics and data discovery purpose. The remaining more than five years of data will not be discarded and the archiving process will be applied for future reference. Because of the EDWH is optimized for storage, any heavily queries for analytics purpose in the system is not recommended which this activity will jeopardize the overall system performance.  
+```{r , echo=FALSE , message=F, warning=F }
+#citet("10.1098/rspb.2013.1372")
+#write.bibtex(file="bibliography.bib")
+
+```
+
+Executing research that related to the agnostic problems within the network operator often faces the problems to get the most reliability dataset from the real system. The third party like vendors is interesting to get the dataset, but the motive is against due to confidential information inside it.Some research instituted or education oriented such as the university, do treat this kind of confidentiality in a different way. 
+
+The dataset needs to be masked and anonymized until the originality of the data set transformed into more quantitative, flexible, and adaptable to the education environment for further processing and analytics such as machine learning techniques and statistical approach. This organization more likely did not interest with the sensitive information, but they are targeting the uniqueness of the dataset and insights that can discovered within it. 
+
+The trouble ticket system for telecommunication industries produced several thousand of records every day. These records provide rich, accurate and complete for the system diagnostics, network operation practice and enhancing the customer experience by solving the problems. 
+
+# Data sources
+
+The dataset is originally from the one of the telecommunication company.From this source, the dataset contains millions of trouble tickets that have been downloaded via `sqoop` operation starting events from 2010 until the latest. Sqoop will periodically schedule the events to download any latest dataset available. Sqoop is the Hadoop components that are designed as a tool to transfer data between Hadoop and most of the relational database server.The main source of the dataset called as Enterprise Data Warehouse. The Enterprise Data Warehouse is a centralization location of the database that consolidates data from multiple sources that used before as the source of information for reporting, analysis, and  planning. 
+
+```{r fig.cap='The Enterprise Data Warehouse' , echo=FALSE , message=F, warning=F}
+img <- readPNG('edwh.png')
+grid.raster(img) 
+```
+
+The current records stored inside the database of all levels of servers and replicated into the Enterprise Data Warehouse (EDWH) for data staging and shared among the departments via the credential and permission for different points of usage or use case. The data are coordinated and conserved for at least for five years, which is enough for the analytics and data discovery purpose. The remaining more than five years of data will not be discarded, and the archiving process will be applied for future reference. EDWH is optimized for database storage that any heavily queries for analytics purpose via this system is not recommended. This activity will jeopardize overall of the system performance. 
 
 
-# Related work
+# Methodology
 
-##  Introduction of TTS
+##  Trouble Ticket System (TTS)
 
-The trouble ticket system is considered as an assistant software which implements the Decision Support System (DSS) that manage and maintain lists of issues recorded by the customer support call center. The system contains a knowledge based containing the vital information for each subscribed customer, common resolution for most of the problems, and other such data. The ticket is the details of particular problem which contains the ticket status and other relevant data.
+The trouble ticket system considered as an assistant software that implements the Decision Support System (DSS) that manage and keep up lists of issues recorded by the customer support call center. The system has a knowledge-based containing the vital information for each subscribed customer, a common resolution for most of the problems, and other such data. The ticket is the details of the particular problem that has the ticket status and other relevant data. The trouble ticket can be so useful for the predictive analytics framework to feed the current dataset from it, and real-time computation can be done using pattern recognition such machine learning and data mining. Machine learning will explore and make the prediction from the dataset while data mining will generate new useful information in different perspective.
+
+
+Due to the rapidly changes records operation such as update and insert from the source , EDWH also reflects this changes. The strategy to identify these changes is by scheduling it every day and get the records minimum three days before . Three days is the average restoration time targeted by the network operation for most of restoration work. This process will enrich the Bigdata platform such as Hadoop and ready for the next analytics work.
+
+The operator defined as the location where the trouble tickets are created into the trouble tickets system via call or third party messaging system such as email. Tickets are the failure or problems records details from the customer. The trouble tickets system handle the storage of the trouble tickets case, and predictive analytics frameworks work as the external system that attached to trouble ticket system. The predictive analytics framework is the backends engine that facilitates the decision making such as prediction. Time is defined by t(*n*) that is *n* as the numbers of days of total trouble tickets dataset.
+
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
 
 ```{r fig.cap='Trouble ticket system with predictive analytics framework' , echo=FALSE , message=F, warning=F}
 img <- readPNG('tts.png')
@@ -49,73 +87,89 @@ grid.raster(img)
 ```
 
 
-##  Basic structure of trouble ticket data
+##  General structure of trouble ticket
 
-The dataset of customer trouble ticket mainly comes from the trouble ticket system (TTS). The data set, then distributed into different levels of staging servers and other type database system at different levels of credential. The table below is a list of some fields from the trouble ticket table which mapped from the CTTS database :-
+The dataset of customer trouble ticket mainly comes from the trouble ticket system (TTS). The data set, then distributed into different levels of staging servers and other type database system at various levels of credential. Generally, it should contains 
 
-|Column Name|Column Type|Notes|
-|-------------|------------|-------------|
-|id|String|Generated ID by the system|
-|created_dt|DateTime|Date of the trouble ticket creation|
-|closed_dt|DateTime|Date of the trouble ticket closed|
-|symp_err|String|Symptom error detected|
-|cause_cat|String|Category Code define by the system |
-|cause_code|String|Cause Code define by the system|
-|res_code|String|Resolution Code define|
-|desc|Text|Detail textual information such as|
-|||customer information, session status,|
-|||system status, network status , etc.|
-|||Cause Code define by the system|
-|acc_name|String|Name of the customer|
-|acc_num|String|Account number of the customer|
-|package|String|Main package subscribed by the customers|
-|zone|String|Product affected zone|
-|....|....|....|")
+|Properties|Notes|
+|-------------|-------------|
+|id|Generated ID by the system|
+|created_date|Date of the trouble ticket creation|
+|closed_date|Date of the trouble ticket closed|
+|cause_category|Category Code define by the system |
+|cause_code|Cause Code define by the system|
+|resolution_code|Resolution Code define|
+|description|Detail textual information such as|
+||customer information, session status ,|
+||system status, network status , |
+||customer history , etc.|
+|....|....|")
 
+To interpret the downloaded dataset, it is necessary to overview the lifecycle of the tickets which also helps to understand more on how the operation work.
 
-\newpage
+A ticket is created whenever equipment or service failure that is discovered by the operation team and have impacted to the network or complain from the customer site. The opening time varies depending on the time of problems discovery or the time of record entry into the database by the customer services. Moreover , the time of closing has multiple possible conditions. It may be the time when the failure was solved or batch periodically check when the tickets are outdated. 
 
-In summary , this table below is the sample of TTS records :-
+In general, when the ticket raised, the status is set to `Open`. This event recorded and required action from the team in field or network operator. This activity recorded into preliminary info that called as Service Request (SR). If the issue is solved via the telephone conversation, the general trouble tickets or network trouble ticket will not be created. If this issue required more explanation and troubleshooting in details, new trouble ticket would be raise. The `open` status of trouble ticket requires more attentive from the operation team on the field. The tickets remain open until it states explicitly change to `closed` after the problems solved.
+
+```{r fig.cap='Trouble ticket system workflow' , echo=FALSE , message=F, warning=F}
+img <- readPNG('tt_structure.png')
+grid.raster(img) 
+```
+
+The purpose of the cause category fields contains the primary group of the problems defined by the operator. More details category is defined in the cause code.  All the code listed in predefined by the system and the selection method is chosen manually based on the symptom analyzed and understood by the system operator.For more details regarding the symptom, the information received via the phone conversation is summarized in the free text section that is `description` section. 
+
+For more details regarding the symptom, the information received via the phone conversation is summarized in the free text section that is `description` section which written in the human language. Thus, the rational this particular part is extra information can be described, and the technical person in charge can more understand the real situation of the problem. Information is transfer from stage to stage, and this is needed to track back the history of the problems. The description part required interpretations and text mining operation, and this might be challenging if the language is different or the word used is not within the general dictionary.[^1] Thus, most of the data is not explicitly structured, it is also highly noisy (e.g, inconsistent formatting) and also very heterogenous (e.g., multiple language, such as Bahasa Melayu or English.  System-generated data, specific telecommunication term, abbreviation, acronyms, and jargons), making it hard to analyze. We introduced an approach for automatically search for specific knowledge or topics from the collection of the free form text section later.
+
+The table below shows the example of the data type and the records inside the trouble tickets dataset.
 
 |Column Type|Example|Field Name|
 |-------------|------------|------------|
 |Integer|[1001] , [1002] , [1003]|ID|
-|DateTime|[2012-09-05 19:39:01.0],[2012-09-05 19:45:39.0]|created_dt|
-|Text|*"Troubleshooting Step:  -check outages  -check account status"* |desc|
-|String|[Performance] , [Failure], [Open], [Closed]|symp_err|
+|DateTime|[2012-09-05 19:39:01.0],[2012-09-05 19:45:39.0]|created_date|
+|Text|*"Troubleshooting Step:  -check outages  -check account status"* |description|
+|String|[Performance] , [Failure], [Open], [Closed]|status|
 |....|....|....|
 
 
 
-We identify the structure inside the TTS (*desc*) contains a free text form inside the description field. This is in need for search and analyze inside it. The data need to transform into something that can have a better understanding and more effective representation. A TTS description is fill-up by capturing from the customer call center or by the technician from the two major sources such as email and subsequent call from the customer.Thus, most of the data is not explicitly structured, it is also highly noisy (e.g, inconsistent formatting) and also very heterogenous (e.g., multiple language, such as Bahasa Melayu or English, system generated data, specific telecommunication term , abbreviation , acronyms and jargons),making it hard to analyze and search information from the raw data. We introduced an approach for automatically search for specific knowledge or topics from the collection of the free from text section (desc) inside the TTS.
-
-# Techniques
-
-Our elegant methodology automatically structuring free-from heterogenous textual data helps to identify the structural pattern specific pattern known to the call center of technician which helps them to speed up the tedious work manually searching and understanding the relevant data inside it. Below is the workflow for this methodology :-
-
-* Acquiring with basic filtering TTS dataset from EDWH into Hadoop using Sqoop
-* Applying index number for TTS dataset inside Hive
-* Second filtering of TTS dataset 
-* Create a Document Term Matrix (DTM)
-* Sparse Terms Removal
-* Vectorization of TTS (VTTS)
-* VTTS and DTM
-* Training
-* Testing
-* Prediction
+```{r, echo=FALSE, results='asis'}
+#  cat("\n\n\\pagebreak\n")
+```
 
 
-## Acquiring with basic filtering TTS dataset from EDWH into Hadoop using Sqoop
+```{r, echo=FALSE, results='asis'}
+  #cat("\n\n\\pagebreak\n")
+```
 
-To acquire TTS dataset from the EDWH we need special operation using *Sqoop* components inside Hadoop into Hive compatible format. Hadoop is an open-source software framework for storing data and running applications on clusters of commodity hardware. Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis.Sqoop is a tool designed to transfer data between Hadoop and relational database servers. 
+## Processing Trouble Tickets contents
+
+Our effective methodology automatically structuring free-from  heterogeneous textual data helps to identify the structural pattern specific pattern known to the call center or technician that helps them to speed up the tedious work manually searching and understanding the relevant data inside it . The category field inside the trouble tickets dataset contains relevant information between the description field. To categorize the keywords inside the description requires full contents of the records. Words that which belong to particular category must have at least one or more than association. Analysis of the categorization of words by the genre  such as  events,  hardware, software,  nodes and links listed below
+
+|Category|Keywords|
+|-------------|-------------|
+|Event|*run,show,through,job,day,backup,shuttle..*|
+|Hardware|*home,fibers,power,ups,modem,reboot,shutdown..*|
+|Software|*windows7,reboot,configuration,shutdown,slow ..*|
+|Nodes|*routers,modem,switches,power,equipment..*|
+|Links|*connection,cards,interface,waves,ping..*|
+
+The categories are crucial for the network operation to learn about the significant impact when the data set transformed into statistical representation. This point will be explained in the next section with the presentation of the results.
+
+### Acquiring trouble tickets dataset into Hadoop
+
+To acquire trouble tickets dataset from the EDWH, we need special operation using `Sqoop` components inside Hadoop into Hive compatible format. Hadoop is an open-source software framework for storing data and running applications on clusters out of commodity hardware. Hive defined as an infrastructure built on top of Hadoop for providing data summarization, query, and analysis. Sqoop works by generating Java defination class  to deserialize data from the data source for use with native Hadoop input format connectors such as JDBC. It creates and launch MapReduce job to automate the import process.MapReduce is a framework that makes the distributed processing inside the cluster. [^2] . This paper also shows more details of the sqoop operation workflow inside the Figure 4. 
+
 
 ```{r fig.cap='Hadoop - Sqoop - Hive Operation' , echo=FALSE ,  message=F, warning=F}
 img <- readPNG('hivesqoophadoop.png')
 grid.raster(img) 
 ```
 
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
 
-Sqoop basic syntax for importing dataset from TTS as follows :-
+To execute this operation,  basic syntax for sqoop operation below needed for importing trouble ticket dataset from data warehouse as follows
 
 ```
 sqoop import --connect jdbc:[rdbms driver]:@[ip_address]:[port]/[db_name] 
@@ -127,7 +181,11 @@ sqoop import --connect jdbc:[rdbms driver]:@[ip_address]:[port]/[db_name]
 --lines-terminated-by '\n' --hive-delims-replacement '';
 ```
 
-Description of the syntax above as follows :-
+```{r, echo=FALSE, results='asis'}
+  #cat("\n\n\\pagebreak\n")
+```
+
+The description of the syntax shows more explanation for every parameter passed to the sqoop component
 
 |Syntax|Description|
 |-------------|------------|
@@ -140,7 +198,7 @@ Description of the syntax above as follows :-
 |--verbose|Print information while execute|
 |-e|specified query statement|
 |*select*|statement returns a result set of records from one or more tables|
-|[field[1:n]||
+|[field[1:n]|use select * for selecting all fields available|
 |REGEXP_REPLACE([desc_field_name],)|search a string for a regular expression pattern|
 |'[^a-zA-Z0-9\\:\\@\\/\\#\\-]', ' ')|remove all special characters and numbers|
 |[-m 1]|Use n map tasks to import in parallel|
@@ -153,27 +211,30 @@ Description of the syntax above as follows :-
 |--lines-terminated-by '\\n'|Sets the end-of-line character|
 |--hive-delims-replacement ''|Replace delimiter from string fields with user defined string|
 
-\newpage
 
-To make, it is safe to resides into the Hive table, any special character set by `REGEXP_REPLACE` found during acquiring the dataset will be replaced with default delimiter `NULL` or empty char. this can be achieved by applying the `--hive-delims-replacement ''` and `REGEXP_REPLACE` `[^a-zA-Z0-9\\:\\@\\/\\#\\-]`  inside the command line while sqoop is executed. The comparison images below shows the clean up results before and after applying the regular expression filtering :-
+A safer techniques to reside trouble ticket dataset into the Hive table by converting any special character using a special sqoop built-in function like `REGEXP_REPLACE` while acquiring the dataset. By replacing with default delimiter with `NULL` or empty char. To achieve this , applying the `--hive-delims-replacement ''` and `REGEXP_REPLACE` `[^a-zA-Z0-9\\:\\@\\/\\#\\-]`  inside the sqoop command line . The comparison images below shows the clean up results before and after applying the regular expression filtering while sqoop the dataset from the EDWH.
 
 
-```{r fig.cap='Original - (desc) field text' , echo=FALSE ,  message=F, warning=F}
+```{r fig.cap='Original results - description field' , echo=FALSE ,  message=F, warning=F}
 img <- readPNG('before.png')
 grid.raster(img) 
 ```
 
 
-```{r fig.cap='Filtered - (desc) structure after applying REGEXP_REPLACE during `Sqoop` operation' , echo=FALSE ,  fig.width=10 ,  message=F, warning=F}
+```{r fig.cap='Cleaned results - description field after REGEXP_REPLACE via sqoop' , echo=FALSE ,  fig.width=10 ,  message=F, warning=F}
 img <- readPNG('after.png')
 grid.raster(img) 
 ```
 
 
+```{r fig.cap='Sqoop operation in console' , echo=FALSE ,  fig.width=10 ,  message=F, warning=F}
+img <- readPNG('sqoopconsole.png')
+grid.raster(img) 
+```
 
-## Applying index number for TTS dataset inside Hive
+### Applying index number for TTS dataset inside Hive
 
-Basic default Hive dataset doesn't have any `autonumber` data type. The `autonumber` is very useful for primary key operation or for filter the records. We applied the the autonumber to the TTS dataset after the Sqoop operation finished. Because of the dataset which resides inside Hadoop is in Hive format , we need to use external jar file which is `hive-contrib-0.12.0-cdh5.1.2.jar`  to create autonumber for the entire records. The jar file can be called by creating custom function as follows :-
+Default Hive dataset does not have any `auto number` data type. The `auto number` is very useful for primary key operation or filter the records. We applied the auto number to the TTS dataset after the Sqoop operation finished. Because of the data set that resides inside Hadoop is in Hive format, we need to use external jar file that is `hive-contrib-0.12.0-cdh5.1.2.jar`  to create auto number for the entire records. The jar file can be executed via JAVA by creating custom function as follows
 
 ```
 drop function IF EXISTS row_sequence(); 
@@ -181,13 +242,11 @@ create function IF NOT EXISTS row_sequence()
 returns BIGINT location 'lib/hive-contrib-0.12.0-cdh5.1.2.jar'
 symbol='org.apache.hadoop.hive.contrib.udf.UDFRowSequence';
 ```
-The rules applying the autonumber to the TTS dataset are to set by limits command inside the Hive-SQL. This is to ensure the dataset creation is reduced into single file inside the HDFS. Without the limit statement the Hive dataset files is chunked into the multiple split and the auto number sequence is set in 0 for each split or `single reducer`. This will cause the each records autonumber or it will be redundant. The Hive-SQL` command for this operation cab be achived by :-
 
-```
-drop table IF EXISTS tts_stage1; 
-create table IF NOT EXISTS tts_stage1 as select row_sequence() as id , 
-* from [tts_table] limit 10000;
-```
+Drop function applies as to drop any defined function while create will new user defined function.
+
+The rules applying the auto number to the TTS dataset are to set the records limits inside the Hive-SQL. This operation is to ensure the number of dataset creation is decrease into a single file inside the HDFS.  Single HDFS file is faster to access by Hadoop. Without the limit statement, the Hive dataset files are chunked into the multiple split and the auto number sequence is set in 0 for each split or `single reducer`. This method will cause the each record filled with unique auto number ID. The sample of the Hive-SQL` command for this operation can be achieved by this example
+
 
 |SQL-Hive|Description|
 |-------------|------------|
@@ -197,20 +256,31 @@ create table IF NOT EXISTS tts_stage1 as select row_sequence() as id ,
 |`* from [tts_table] limit 10000;`|Select all the fields from original TTS and limits for `single reducer`|
 
 
-```{r fig.cap='Initial Hive TTS Dataset after Sqoop operation' , echo=FALSE ,  fig.height=1 , fig.width=3 , message=F, warning=F}
+
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
+
+
+```{r fig.cap='Initial Hive trouble ticket dataset after sqoop operation' , echo=FALSE ,  fig.height=1 , fig.width=3 , message=F, warning=F}
 img <- readPNG('tts_noid.png')
 grid.raster(img) 
 ```
 
 
 
-```{r fig.cap='Posterior Hive TTS Dataset after applying Hive-SQL' , echo=FALSE , fig.height=1 , fig.width=3 , message=F, warning=F}
+```{r fig.cap='Following Hive trouble ticket dataset after applying autonumber in Hive-SQL' , echo=FALSE , fig.height=1 , fig.width=3 , message=F, warning=F}
 img <- readPNG('tts_id.png')
 grid.raster(img) 
 ```
 
+The advantages of doing this method are it makes the queries much faster.  Uniques number indexes guarantee identifiable records inside Hadoop. Limiting the records now is possible by adding a condition to the HiveSQL statement.  Example like `id > 2` and `id < 5` will fetch records that have id 3 and 4.
 
-## Second filtering of TTS dataset
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
+
+### Second filtering of TTS dataset
 
 Since the dataset now are filled by autonumber `id`, now the record can be filtered by the `id` range . Tools such as RStudio which implements the R language statistical is used in this process. RStudio is capable to connect to various datasources including Hive. In this section , Open Database Connectivity(ODBC) for Hive need to be installed and configured. ODBC for Hive can be downloaded from the Cloudera website (http://www.cloudera.com/content/www/en-us/downloads/connectors/hive/odbc/2-5-12.html). 
 
@@ -220,7 +290,6 @@ img <- readPNG('odbc.png')
 grid.raster(img) 
 ```
 
-\newpage
 
 Set the ODBC data source name *[dsn_name]* , the host address , the port number (default for *Impala* is 21050 ; *Hive* is 10000 ) , and the database name *[db_name]*. After that , test the ODBC connection.
 
@@ -261,7 +330,6 @@ Five stages of data filteration need to be applied to clean up description text 
 |5|Trimming the whitespace|`df_desc <-as.data.frame`|
 |||`(sapply(df_desc,gsub,pattern="^\\s+|\\s+$",replacement=""))`|
 
-\newpage
 
 The image below shows state of text description before applying the regular expression by the RScript. The description text contains irrelevant character types like numbers , special symbols , spaces , etc.
 
@@ -279,7 +347,7 @@ grid.raster(img)
 ```
 
 
-## Create a Document Term Matrix (DTM)
+### Create a Document Term Matrix (DTM)
 
 Document Term Matrix (DTM) is a matrix based dataset which describes the frequency of terms that occur inside collection of dataset especially the text based types. The DTM was spesifically designed to have rows and columns. Rows is correspond as related unique rows records (*documents*) and columns as the unique terms which exist inside the selective column dataset.
 
@@ -288,7 +356,9 @@ img <- readPNG('dtm.png')
 grid.raster(img) 
 ```
 
-\newpage
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
 
 The RScript below implements the Document Term Matrix function :-
 
@@ -348,11 +418,16 @@ panderOptions("digits", 1)
 tdm
 ```
 
+
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
+
+
 The information above summarize that the sparsity level is above 80% and removal of sparse term is needed for the next process . Some term like `access` , `alarm` , `already` , `atpmgitn` is low in frequency which proves all TTS `desc` sparsity level.
 
-\newpage
 
-## Sparse Terms Removal
+### Sparse Terms Removal
 
 Sparse Terms is the term which has low frequency . This can help the generalization process and prevent overfitting into the model. The example show the R Script with removal of 60% of the sparsity level inside the TTS `desc` field.
 
@@ -401,9 +476,9 @@ tdm
 
 After applying the remove sparse term filter , the DTM sparsity level was reduced to 35% . Now the DTM dimension is applicable as part of the predictive model.
 
-## Vectorization of TTS (VTTS)
+### Vectorization of TTS (VTTS)
 
-To enable dataset for prediction data processing, we need to convert all the independent variables inside the TTS which is in factor format (*code status*) into numeric format. In this sample we select the course code as the sample for vectorize the dataset. This technique can be applied to all non-numeric formats of the other field inside the TTS dataset.
+To enable dataset for prediction data processing, we need to convert all the independent variables inside the TTS which is in factor format (*code status*) into numeric format. In this sample we select only one of the fields which is the `cause code` as the sample for vectorizing the dataset. This technique will be applied to all non-numeric field formats inside the TTS dataset.
 
 ```{r echo=FALSE ,  fig.align='center' ,   fig.height=2 , fig.width=3 ,  message=F, warning=F}
 suppressWarnings(suppressMessages(library(RODBC)))
@@ -422,16 +497,17 @@ pander(head(df_all,5),caption = "Sample TTS Cause Code")
 
 ```
 
-To change the cause code into a vector , we need to applied the 
+To change the cause code into a vector , we need to apply the R Script code below to convert all the factor  into numerical format. 
 
 ```
-for(i in names(df_all)){
-  num <- as.numeric(as.factor(df_all[,i]))
-  df_all <- cbind(df_all,num)
-  names(df_all)[names(df_all)=="num"] <- paste(names(df_all[i]),"_factor",sep = "")
-}
+        for(i in names(df_all)){
+          num <- as.numeric(as.factor(df_all[,i]))
+          df_all <- cbind(df_all,num)
+          names(df_all)[names(df_all)=="num"] <- paste(names(df_all[i]),"_factor",sep = "")
+        }
 
 ```
+`as.numeric` is a function which creates the objects into numeric and `as.factor` encodes a vector as a factor. A table below shows the result of the encoding from the cause code factor `status` into the `numerical` format.
 
 ```{r echo=FALSE ,  fig.align='center' ,   fig.height=2 , fig.width=3 ,  message=F, warning=F}
 suppressWarnings(suppressMessages(library(RODBC)))
@@ -455,39 +531,200 @@ for(i in names(df_all)){
 #names(df_all)
 df_all$tt_num_factor <- NULL
 #df_all$tt_num <- NULL
-pander(head(df_all,5),caption = "Sample TTS Cause Code and Cause Code Vectorization")
+pander(head(df_all,5),caption = "Sample TTS Cause Code Vectorization")
 
 ```
 
+
+
+# Results
+
+
 ## VTTS with DTM
 
-Nothing here
+The final steps of this techniques is to combine all the vectorization of TTS with the DTM. All the standard name of each selected column will be rename into `[fieldname]_factor` format. Example shows below :-
+
+|Original column name|Vector column name|
+|-------------|------------|
+|created_by|created_by_*factor*|
+|account_num|account_num_*factor*|
+|product_factor|product_*factor*|
+|sub_product|sub_product_*factor*|
+|symp_err|symp_err_*factor*|
+|...|...|
+
+The construction design of the table structure as follows :-
+
+* Select the `tt_num` (*ticket number*) columns. Tt_num is the `key` of the TTS dataset.
+
+```
+    df_tt_num <- as.data.frame(queryResult$tt_num)
+
+```
+
+* Selecting all the factor columns
+
+```
+    df <- as.data.frame(queryResult)
+    names(df)[1] <- "created_by_factor"
+    names(df)[2] <- "account_num_factor"
+    names(df)[..n] <- "[..x]_factor"
+    ....
+    replace [..n] with column number and [..x] is the column name
+    ....
+
+```
+
+* Binding all the factor columns with the `tt_num`
+
+```
+    df <- cbind(df_tt_num,df)
+
+```
+* The results after binding `tt_num` with some of the `factor` columns and the `tdm` matrix
+
+```{r echo=FALSE ,  fig.align='center' ,   fig.height=2 , fig.width=3 ,  message=F, warning=F}
+suppressWarnings(suppressMessages(library(RODBC)))
+suppressWarnings(suppressMessages(library(tm)))
+suppressWarnings(suppressMessages(library(NLP)))
+conn <- odbcConnect(dsn="nova", uid="", pwd="")
+#sqlTables(channel)
+queryResult <- sqlQuery(conn, "select * from nova.nova_trouble_ticket where length(description) > 30  and cause_code not like '%tm%' and zone <> 'null' and resolution_team  <> 'null' and sub_product <> 'null' order by rand() limit 100 ")
+odbcClose(conn)
+
+df_tt_num <- as.data.frame(tolower(queryResult$tt_num))
+df_desc <- as.data.frame(tolower(queryResult$description))
+names(df_tt_num) = "tt_num"
+names(df_desc) = "desc"
 
 
-# Experiments and results
+df_desc <-as.data.frame(sapply(df_desc,gsub,pattern="[[:digit:]]",replacement=""))
+df_desc <-as.data.frame(sapply(df_desc,gsub,pattern="[[:punct:]]",replacement=""))
+df_desc <-as.data.frame(sapply(df_desc,gsub,pattern="@\\w+",replacement=""))
+df_desc <-as.data.frame(sapply(df_desc,gsub,pattern="^\\s+|\\s+$",replacement=""))
+df_desc <-as.data.frame(sapply(df_desc,gsub,pattern="[ \t]{2,}",replacement=""))
+names(df_desc) = "desc"
+mach_corpus = Corpus(VectorSource(df_desc$desc))
 
-Nothing here
+# create document term matrix applying some transformations
+tdm = DocumentTermMatrix(
+mach_corpus,
+control = list(
+removePunctuation = TRUE,
+stopwords = c(stopwords("english")),
+removeNumbers = TRUE, tolower = TRUE))
+tdm <- removeSparseTerms(tdm, sparse= 0.6 )
+m <- as.matrix(tdm)
 
-## Training
 
-Nothing here
 
-## Testing
+df <- as.data.frame(queryResult)
+df$contact_name <- NULL
+df$contact_home_phone <- NULL
+df$contact_email_addr <- NULL
+df$contact_office_phone <- NULL
+df$contact_mobile_phone <- NULL
+df$`tt_row_id` <- NULL
+#df$`tt_num` <- NULL
+df$tt_type <- NULL
+df$`created_date` <- NULL
+df$`closed_date` <- NULL
+df$`installed_date` <- NULL
+df$timestamp <- NULL
+df$service_point_id <- NULL
+df$contact_id <- NULL
+df$owner_position <- NULL
+df$tt_sub_type <- NULL
+df$severity <- NULL
+df$status <- NULL
+df$important_message <- NULL
+df$network_tt_id <- NULL
+df$swap_order_num <- NULL
+df$appointment_flag <- NULL
+df$nova_account_name <- NULL
+df$nova_subscriber_num <- NULL
+#df$nova_account_num <- NULL
+df$repeat_ticket_count <- NULL
+df$follow_up_ticket_count <- NULL
+df$service_order_num <- NULL
+df$source <- NULL
+df$owner_name <- NULL
+df$category <- NULL
+#df$description <- NULL
+df$due_date <- NULL
+df$part_num <- NULL
+df$ptt <- NULL
+df$asset_id <- NULL
+df$network_layer <- NULL
+df$network_row_id <- NULL
+df$pending_verify_date <- NULL
+df$package_row_id <- NULL
+df$priority <- NULL
 
-Nothing here
+for(i in names(df)){
+  num <- as.numeric(as.factor(df[,i]))
+  df <- cbind(df,num)
+  names(df)[names(df)=="num"] <- paste(names(df[i]),"_factor",sep = "")
+  #print(paste(names(df_all[i]),"1",sep = ""))
+}
+#names(df)
+df1 <- as.data.frame(c('...','...','...','...','...'))
+names(df1) = "[x]_factor"
+df <- df[27:31]
+df <- cbind(df_tt_num,df)
+names(df)[3] <- "account_num_factor"
+names(df)[6] <- "symp_err_factor"
+df <- df[1:3]
+df <- cbind(df,df1,m[,1:11])
+pander(head(df,5),caption = "Ticket No , TTS Vectorization and TDM table")
 
-## Prediction
+```
 
-Nothing here
+The table above show that combines three elements which is `TT_NUM` , `TTS` vector and the `DTM` matrix. Now all the field is ready to utilize for further analysis such as classification and prediction .
 
-## Results
 
-Nothing here
-
-# Acknowledgments
-
-Nothing here
+```{r, echo=FALSE, results='asis'}
+  cat("\n\n\\pagebreak\n")
+```
 
 # References
 
-Nothing here
+
+```{r , echo=FALSE , message=F, warning=F}
+library("knitcitations")
+cleanbib()
+options("citation_format" = "pandoc")
+#bibtex::read.bib("references.bib")
+#bibtex::read.bib( package = "grDevices" )
+#bibtex::read.bib( package = "graphics" )
+#bibtex::read.bib( package = "pander" )
+#bibtex::read.bib( package = "knitcitations" )
+
+```
+
+```
+N.p., n.d. Web.
+Ye, Yangdong, Jing Zhang, Junwei Gao, and Limin Jia. 
+"The Application of Decision Tree Induction of Classification in Train 
+Tickets System." Proceedings. International Conference on Machine Learning and 
+Cybernetics (2002): n. pag. Web.
+
+Ye, Yangdong, Jing Zhang, Junwei Gao, and Limin Jia. "The Application of Decision
+Tree Induction of Classification in Train Tickets System."Proceedings. International 
+Conference on Machine Learning and Cybernetics (2002): n. pag. Web.
+
+Marcu, Patricia, Genady Grabarnik, Laura Luan, Daniela Rosu, Larisa Shwartz, and Chris Ward.
+"Towards an Optimized Model of Incident Ticket Correlation."2009 IFIP/IEEE 
+International Symposium on Integrated Network Management(2009): n. pag. Web.
+
+Shao, Qihong, Yi Chen, Shu Tao, Xifeng Yan, and Nikos Anerousis. "EasyTicket." Proc. 
+VLDB Endow. Proceedings of the VLDB Endowment 1.2 (2008): 1436-439. Web.
+
+```
+
+[^1]: Ye, Yangdong, Jing Zhang, Junwei Gao, and Limin Jia. "The Application of Decision
+Tree Induction of Classification in Train Tickets System."Proceedings. International 
+Conference on Machine Learning and Cybernetics (2002): n. pag. Web. [@Yangdong2002].
+
+[^2]: Chen, Changai, and Shan Jiang. "Research of the Big Data Platform and the Traditional Data Acquisition and Transmission Based on Sqoop Technology." <i>TOAUTOCJ The Open Automation and Control Systems Journal</i> 7.1 (2015): 1174-180. Web. [@ChenChangai2015].
+
